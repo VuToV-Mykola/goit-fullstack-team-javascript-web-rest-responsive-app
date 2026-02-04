@@ -27,7 +27,7 @@
 ## 🎯 About the project and what problem it solves
 
 - **About:** Single-page responsive site built from HTML partials and modular CSS files, following the [ArtistsHub (Figma)](https://www.figma.com/design/knhOfrwUVhgwEznVU8lTKL/ArtistsHub--Copy-?node-id=5999-10563) mockup.
-- **Purpose:** Presenting a platform (hub) for artists: info blocks, gallery, advantages, testimonials, contacts. Implemented with mobile-first approach, semantic markup, valid HTML/CSS/JS, and convenient run/build via Vite.
+- **Purpose:** Presenting a platform (hub) for artists: hero screen, artists list, “About us”, feedback, and a details modal. Implemented with mobile-first approach, semantic markup, valid HTML/CSS/JS, and convenient run/build via Vite.
 
 ---
 
@@ -80,9 +80,21 @@ Sections and files are aligned with the [ArtistsHub (Figma)](https://www.figma.c
 
 ```
 goit-fullstack-team-javascript-web-rest-responsive-app/
+├── .github/
+│   └── workflows/
+│       ├── deploy.yml
+│       └── screenshot-and-visitor.yaml
+├── assets/
+│   └── db/
+│       ├── likes-badge.json
+│       ├── manual-likes.json
+│       ├── repo-license.json
+│       ├── repo-size.json
+│       ├── stargazers.json
+│       ├── stats-data.json
+│       ├── unique-users.json
+│       └── visitors-badge.json
 ├── src/
-│   ├── index.html
-│   ├── main.js
 │   ├── css/
 │   │   ├── styles.css      # main entry, imports all partials
 │   │   ├── reset.css
@@ -91,27 +103,32 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 │   │   ├── header.css
 │   │   ├── hero.css
 │   │   ├── about.css
-│   │   ├── advantages.css
-│   │   ├── assortment.css
-│   │   ├── gallery.css
-│   │   ├── feedbacks.css
-│   │   ├── support.css
+│   │   ├── artists.css
+│   │   ├── feedback.css
+│   │   ├── artist-modal.css
 │   │   └── footer.css
+│   ├── img/
+│   │   └── icons.svg
+│   ├── js/
+│   │   └── modal.js
 │   ├── partials/
 │   │   ├── header.html
 │   │   ├── hero.html
 │   │   ├── about.html
-│   │   ├── advantages.html
-│   │   ├── assortment.html
-│   │   ├── gallery.html
-│   │   ├── feedbacks.html
-│   │   ├── support.html
+│   │   ├── artists.html
+│   │   ├── feedback.html
+│   │   ├── artist-modal.html
 │   │   └── footer.html
-│   ├── js/
-│   │   └── modal.js
-│   └── img/
-├── assets/
+│   ├── public/
+│   │   └── favicon.svg
+│   ├── index.html
+│   └── main.js
+├── .gitignore
+├── .prettierignore
+├── .prettierrc.json
+├── .stylelintignore
 ├── package.json
+├── package-lock.json
 ├── vite.config.js
 ├── README.md
 ├── README.en.md
@@ -125,11 +142,9 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 | Header | `header.html` | `header.css` |
 | Hero | `hero.html` | `hero.css` |
 | About | `about.html` | `about.css` |
-| Advantages | `advantages.html` | `advantages.css` |
-| Assortment | `assortment.html` | `assortment.css` |
-| Gallery | `gallery.html` | `gallery.css` |
-| Feedbacks | `feedbacks.html` | `feedbacks.css` |
-| Support | `support.html` | `support.css` |
+| Artists | `artists.html` | `artists.css` |
+| Feedback | `feedback.html` | `feedback.css` |
+| Artist Details Modal | `artist-modal.html` | `artist-modal.css` |
 | Footer | `footer.html` | `footer.css` |
 
 ---
