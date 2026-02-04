@@ -52,17 +52,6 @@ jobs:
             echo "✅ Regular commit - proceeding with workflow"
           fi
 
-      - name: 🔍 Check if screenshot is commented in README
-        if: steps.check_commit.outputs.skip != 'true'
-        run: |
-          if grep -q "^[[:space:]]*<!--.*📸 Скріншот проекту" README.md || grep -q "^[[:space:]]*<!--.*📸 Latest Screenshot" README.md; then
-            echo "📸 Screenshot section is commented out - skipping screenshot generation"
-            echo "SCREENSHOT_SKIP=true" >> $GITHUB_ENV
-          else
-            echo "📸 Screenshot section is active - proceeding with generation"
-            echo "SCREENSHOT_SKIP=false" >> $GITHUB_ENV
-          fi
-
       - name: 🚀 Initialize workflow
         if: steps.check_commit.outputs.skip != 'true'
         run: |
@@ -274,10 +263,6 @@ jobs:
       - name: 🖥 Setup Node.js and dependencies
         if: steps.check_commit.outputs.skip != 'true'
         run: |
-          if [ "$SCREENSHOT_SKIP" = "true" ]; then
-            echo "⏭️ Skipping Node.js setup - screenshot generation disabled"
-            exit 0
-          fi
           echo "🔧 Setting up Node.js..."
           curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
           sudo apt-get install -y nodejs
@@ -315,10 +300,11 @@ jobs:
             exit 0
           fi
 
-          if [ "$SCREENSHOT_SKIP" = "true" ]; then
-            echo "⏭️ Screenshot generation skipped - section is commented out"
-            echo "SCREENSHOT_CREATED=false" >> $GITHUB_ENV
-            exit 0
+          if [ -f "$SCREENSHOT_DIR/screenshot.png" ]; then
+            rm -f "$SCREENSHOT_DIR/screenshot.png"
+          fi
+          if [ -f "$SCREENSHOT_DIR/screenshot.hash" ]; then
+            rm -f "$SCREENSHOT_DIR/screenshot.hash"
           fi
 
           node -e "
@@ -501,6 +487,16 @@ jobs:
               echo "SCREENSHOT_CREATED=false" >> $GITHUB_ENV
             fi
           fi
+          if [ "$SCREENSHOT_CREATED" = "true" ] && [ -f "$SCREENSHOT_DIR/screenshot.png" ]; then
+            if command -v sha256sum >/dev/null 2>&1; then
+              SCREENSHOT_HASH=$(sha256sum "$SCREENSHOT_DIR/screenshot.png" | awk '{print $1}')
+            else
+              SCREENSHOT_HASH=$(shasum -a 256 "$SCREENSHOT_DIR/screenshot.png" | awk '{print $1}')
+            fi
+            echo "$SCREENSHOT_HASH" > "$SCREENSHOT_DIR/screenshot.hash"
+            echo "SCREENSHOT_HASH=$SCREENSHOT_HASH" >> $GITHUB_ENV
+            echo "🔐 Screenshot hash: $SCREENSHOT_HASH"
+          fi
 
           rm -f screenshot_output.log
 
@@ -534,9 +530,17 @@ jobs:
             if [ "$SCREENSHOT_CREATED" = "true" ] && [ -f "$SCREENSHOT_DIR/screenshot.png" ]; then
               SCREENSHOT_SIZE=$(stat -f%z "$SCREENSHOT_DIR/screenshot.png" 2>/dev/null || stat -c%s "$SCREENSHOT_DIR/screenshot.png" 2>/dev/null || echo "0")
               if [ "$SCREENSHOT_SIZE" -gt 0 ]; then
+                SCREENSHOT_HASH_VALUE="$SCREENSHOT_HASH"
+                if [ -z "$SCREENSHOT_HASH_VALUE" ] && [ -f "$SCREENSHOT_DIR/screenshot.hash" ]; then
+                  SCREENSHOT_HASH_VALUE=$(cat "$SCREENSHOT_DIR/screenshot.hash")
+                fi
+                SCREENSHOT_QUERY=""
+                if [ -n "$SCREENSHOT_HASH_VALUE" ]; then
+                  SCREENSHOT_QUERY="?v=$SCREENSHOT_HASH_VALUE"
+                fi
                 echo ""
                 echo "## 📸 Скріншот проекту"
-                echo "![Project Screenshot](./$SCREENSHOT_DIR/screenshot.png)"
+                echo "![Project Screenshot](./$SCREENSHOT_DIR/screenshot.png$SCREENSHOT_QUERY)"
               fi
             fi
             
