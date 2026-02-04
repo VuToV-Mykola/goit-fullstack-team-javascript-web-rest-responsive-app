@@ -1,6 +1,2 @@
 /* Header (Navbar) / Шапка: темний фон */
-.page-header,
-.header {
-  background-color: var(--color-bg-dark);
-  color: var(--color-text);
-}
+

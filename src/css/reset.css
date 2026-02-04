@@ -25,7 +25,7 @@ ol {
 /* Links: inherit color, no underline / Посилання: колір спадковий, без підкреслення */
 a {
   text-decoration: none;
-  color: currentColor;
+  color: currentcolor;
 }
 
 /* Buttons: pointer cursor / Кнопки: курсор-вказівник */
@@ -41,4 +41,3 @@ img {
   max-width: 100%;
   height: auto;
 }
-
