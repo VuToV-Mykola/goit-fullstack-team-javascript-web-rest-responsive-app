@@ -34,7 +34,7 @@
     <title>ArtistsHub — платформа для артистів</title>
     <!-- Українською: Заголовок сторінки (вкладка браузера) / English: Page title (browser tab) -->
     <script type="module" crossorigin src="/goit-fullstack-team-javascript-web-rest-responsive-app/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-fullstack-team-javascript-web-rest-responsive-app/assets/index-CfAFMO-B.css">
+    <link rel="stylesheet" crossorigin href="/goit-fullstack-team-javascript-web-rest-responsive-app/assets/index-Ms4BjhH4.css">
   </head>
   <!--!!! BODY !!!-->
   <body class="page">
@@ -60,44 +60,47 @@
   <h2 class="hero-title" id="hero-title-id">hero</h2>
 </section>
 
-      <!--!!! feature !!!-->
+      <!--!!! artists !!!-->
+      <!-- htmlhint doctype-first:false -->
+<section class="artists section" aria-labelledby="artists-title">
+  <!-- Українською: Тематична група контенту / English: Thematic content group -->
+  <h2 class="artists-title" id="artists-title">Виконавці</h2>
+</section>
+
+      <!--!!! about us !!!-->
       <section class="about section">
   <!-- Українською: Тематична група контенту / English: Thematic content group -->
   <h2 class="about-title" id="about-title-id">about</h2>
 </section>
 
-      <!--!!! advantages !!!-->
-      <section class="advantages section">
+      <!--!!! feedback !!!-->
+      <!-- htmlhint doctype-first:false -->
+<section class="feedback section" aria-labelledby="feedback-title">
   <!-- Українською: Тематична група контенту / English: Thematic content group -->
-  <h2 class="advantages-title" id="advantages-title-id">advantages</h2>
-</section>
-
-      <!--!!! product !!!-->
-      <section class="assortment section">
-  <!-- Українською: Тематична група контенту / English: Thematic content group -->
-  <h2 class="assortment-title" id="assortment-title-id">assortment</h2>
-</section>
-
-      <!--!!! gallery !!!-->
-      <section class="gallery section">
-  <!-- Українською: Тематична група контенту / English: Thematic content group -->
-  <h2 class="gallery-title" id="gallery-title-id">gallery</h2>
-</section>
-
-      <!--!!! testimonial !!!-->
-      <section class="feedbacks section">
-  <!-- Українською: Тематична група контенту / English: Thematic content group -->
-  <h2 class="feedbacks-title" id="feedbacks-title-id">feedbacks</h2>
-</section>
-
-
-      <!--!!! contact !!!-->
-      <section class="support section">
-  <!-- Українською: Тематична група контенту / English: Thematic content group -->
-  <h2 class="support-title" id="support-title-id">support</h2>
+  <h2 class="feedback-title" id="feedback-title">Відгуки</h2>
 </section>
 
     </main>
+    <!--!!! artist details modal !!!-->
+    <!-- htmlhint doctype-first:false -->
+<dialog
+  class="artist-modal"
+  id="artist-details-modal"
+  aria-labelledby="artist-modal-title"
+  aria-describedby="artist-modal-description">
+  <div class="artist-modal-content">
+    <h2 class="artist-modal-title" id="artist-modal-title">
+      Детальна інформація про виконавця
+    </h2>
+    <p class="artist-modal-description" id="artist-modal-description">
+      Тут відображається розширена інформація про обраного виконавця.
+    </p>
+    <button class="artist-modal-close" type="button" data-modal-close>
+      Закрити
+    </button>
+  </div>
+</dialog>
+
     <!--!!! footer !!!-->
     <footer class="page-footer">
       <!-- Українською: Нижня частина сторінки (копірайт, посилання) / English: Bottom section (copyright, links) -->
