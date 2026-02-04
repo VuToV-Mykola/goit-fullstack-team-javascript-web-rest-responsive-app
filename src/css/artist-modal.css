@@ -1,29 +1,2 @@
 /* Artist details modal / Модальне вікно виконавця */
-.artist-modal {
-  width: min(90vw, 520px);
-  border: none;
-  border-radius: 12px;
-  padding: 0;
-  background-color: var(--color-bg-dark);
-  color: var(--color-text);
-}
 
-.artist-modal::backdrop {
-  background-color: rgb(0 0 0 / 60%);
-}
-
-.artist-modal-content {
-  padding: 24px;
-  display: grid;
-  gap: 16px;
-}
-
-.artist-modal-close {
-  align-self: start;
-  padding: 10px 16px;
-  border: 1px solid var(--color-primary);
-  border-radius: 8px;
-  background-color: transparent;
-  color: var(--color-text);
-  cursor: pointer;
-}

@@ -1,6 +1,2 @@
 /* Footer: dark background (overrides .section) / Підвал: темний фон (перевизначення .section) */
-.page-footer,
-.footer {
-  background-color: var(--color-bg-dark);
-  color: var(--color-text);
-}
+
