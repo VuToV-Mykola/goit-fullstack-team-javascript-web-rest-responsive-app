@@ -1,19 +1,27 @@
-/* Styles for Mobile devices */
+/* ========== Container / Контейнер (відступи, ширина) ========== */
+/* Mobile 16px; Tablet 32px; Desktop 64px, max 1312px / Мобільний 16px; планшет 32px; десктоп 64px */
+
 .container {
   min-width: 320px;
-  max-width: 375px;
-  margin: 0 auto;
-  padding: 0 16px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-x-sm);
+  padding-right: var(--container-padding-x-sm);
 }
-/* Styles for Tablet devices */
-@media only screen and (min-width: 768px) {
+
+@media only screen and (width >= 768px) {
   .container {
     max-width: 768px;
+    padding-left: var(--container-padding-x-md);
+    padding-right: var(--container-padding-x-md);
   }
 }
-/* Styles for Desktop devices */
-@media only screen and (min-width: 1200px) {
+
+@media only screen and (width >= 1200px) {
   .container {
-    max-width: 1200px;
+    max-width: var(--container-content-max);
+    padding-left: var(--container-padding-x-lg);
+    padding-right: var(--container-padding-x-lg);
   }
 }

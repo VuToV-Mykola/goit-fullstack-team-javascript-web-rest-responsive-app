@@ -1,3 +1,4 @@
+/* Headings & paragraphs: no default margin / Заголовки та абзаци: без стандартного margin */
 h1,
 h2,
 h3,
@@ -8,27 +9,36 @@ p {
   margin: 0;
 }
 
+/* Last paragraph in container / Останній абзац у контейнері */
 p:last-child {
   margin-bottom: 0;
 }
 
-ul {
+/* Lists: no bullets, no indent / Списки: без маркерів, без відступу */
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+/* Links: inherit color, no underline / Посилання: колір спадковий, без підкреслення */
 a {
-  color: currentColor;
   text-decoration: none;
+  color: currentColor;
 }
 
+/* Buttons: pointer cursor / Кнопки: курсор-вказівник */
 button {
   cursor: pointer;
+  font: inherit;
+  color: inherit;
 }
 
+/* Images: block, responsive / Зображення: блок, адаптивні */
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+

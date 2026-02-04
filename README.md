@@ -1,113 +1,162 @@
-# Vanilla App Template
+# ArtistsHub
 
-Цей проект було створено за допомогою Vite. Для знайомства та налаштування
-додаткових можливостей [звернись до документації](https://vitejs.dev/).
+### 🌐 Виберіть для Вас комфортну мову
 
-## Створення репозиторію за шаблоном
+[🇺🇦 Українська](README.md) | [🇬🇧 English](README.en.md) | [🇩🇪 Deutsch](README.de.md)
 
-Використовуй цей репозиторій організації GoIT як шаблон для створення
-репозиторію свого проекту. Для цього натисни на кнопку `«Use this template»` і
-обери опцію `«Create a new repository»`, як показано на зображенні.
+<!-- AUTOGEN:STATS -->
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/) [![PostCSS](https://img.shields.io/badge/PostCSS-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white)](https://postcss.org/) [![Terminal](https://img.shields.io/badge/mac%20terminal-000000?style=for-the-badge&logo=apple&logoColor=white&labelColor=000000)](https://support.apple.com/guide/terminal/welcome/mac) [![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/) [![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/)
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+[![📊 Views](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/visitors-badge.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/traffic)
+[![⭐ Stars](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/likes-badge.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/actions/workflows/screenshot-and-visitor.yaml)
+[![📦 Size](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/repo-size.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app)
+[![📄 License](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/repo-license.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/blob/main/LICENSE)
 
-На наступному етапі відкриється сторінка створення нового репозиторію. Заповни
-поле його імені, переконайся, що репозиторій публічний, після чого натисни
-кнопку `«Create repository from template»`.
+## 📸 Скріншот проекту
+![Project Screenshot](./assets/screenshot.png)
+<!-- END:AUTOGEN -->
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+---
 
-Після того, як репозиторій буде створено, необхідно перейти в налаштування
-створеного репозиторію на вкладку `Settings` > `Actions` > `General` як показано
-на зображенні.
+## 📌 Назва проєкту
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+**ArtistsHub** — адаптивний веб-додаток (лендинг) за макетом Figma. Командний проєкт GoIT Fullstack (JavaScript, REST, responsive).
 
-Проскроливши сторінку до самого кінця, в секції `«Workflow permissions»` обери
-опцію `«Read and write permissions»` і постав галочку в чекбоксі. Це необхідно
-для автоматизації процесу деплою проекту.
+---
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+## 🎯 Про проєкт і яку задачу він вирішує
 
-Тепер у тебе є особистий репозиторій проекту, зі структурою файлів та папок
-репозиторію-шаблону. Далі працюй з ним, як з будь-яким іншим особистим
-репозиторієм, клонуй його собі на комп'ютер, пиши код, роби коміти та відправляй
-їх на GitHub.
+- **Про проєкт:** односторінковий адаптивний сайт, зібраний з HTML-partials та модульних CSS-файлів, згідно з макетом [ArtistsHub (Figma)](https://www.figma.com/design/knhOfrwUVhgwEznVU8lTKL/ArtistsHub--Copy-?node-id=5999-10563).
+- **Задача:** презентація платформи (хабу) для артистів: інформаційні блоки, галерея, переваги, відгуки, контакти. Реалізовано mobile-first, семантична розмітка, валідний HTML/CSS/JS, зручний запуск та збірка через Vite.
 
-## Підготовка до роботи
+---
 
-1. Переконайся, що на комп'ютері встановлено LTS-версію Node.js.
-   [Скачай та встанови](https://nodejs.org/en/) її якщо необхідно.
-2. Встанови базові залежності проекту в терміналі командою `npm install`.
-3. Запусти режим розробки, виконавши в терміналі команду `npm run dev`.
-4. Перейдіть у браузері за адресою
-   [http://localhost:5173](http://localhost:5173). Ця сторінка буде автоматично
-   перезавантажуватись після збереження змін у файли проекту.
+## 🛠 Технології
 
-## Файли і папки
+| Категорія | Стек |
+|-----------|------|
+| Розмітка | HTML5, семантичні теги |
+| Стилі | CSS3, modern-normalize, mobile-first, [Stylelint](https://stylelint.io/user-guide/rules) |
+| Скрипти | JavaScript (ES modules) |
+| Збірка | Vite, PostCSS (sort media queries), vite-plugin-html-inject, vite-plugin-full-reload |
+| Інше | [Code Guide](https://codeguide.co/), валідатори W3C / JSHint |
 
-- Файли розмітки компонентів сторінки повинні лежати в папці `src/partials` та
-  імпортуватись до файлу `index.html`. Наприклад, файл з розміткою хедера
-  `header.html` створюємо у папці `partials` та імпортуємо в `index.html`.
-- Файли стилів повинні лежати в папці `src/css` та імпортуватись до HTML-файлів
-  сторінок. Наприклад, для `index.html` файл стилів називається `index.css`.
-- Зображення додавай до папки `src/img`. Збирач оптимізує їх, але тільки при
-  деплої продакшн версії проекту. Все це відбувається у хмарі, щоб не
-  навантажувати твій комп'ютер, тому що на слабких компʼютерах це може зайняти
-  багато часу.
+---
 
-## Деплой
+## 🚀 Як запустити / розгорнути проєкт
 
-Продакшн версія проекту буде автоматично збиратися та деплоїтись на GitHub
-Pages, у гілку `gh-pages`, щоразу, коли оновлюється гілка `main`. Наприклад,
-після прямого пуша або прийнятого пул-реквесту. Для цього необхідно у файлі
-`package.json` змінити значення прапора `--base=/<REPO>/`, для команди `build`,
-замінивши `<REPO>` на назву свого репозиторію, та відправити зміни на GitHub.
+1. **Клонувати репозиторій і перейти в папку проєкту:**
+   ```bash
+   cd goit-fullstack-team-javascript-web-rest-responsive-app
+   ```
 
-```json
-"build": "vite build --base=/<REPO>/",
+2. **Встановити залежності:**
+   ```bash
+   npm install
+   ```
+
+3. **Запустити режим розробки:**
+   ```bash
+   npm run dev
+   ```
+   Відкриється браузер (наприклад, `http://localhost:5173/`).
+
+4. **Зібрати продакшн-версію:**
+   ```bash
+   npm run build
+   ```
+   Результат у папці `dist/`.
+
+5. **Переглянути збірку локально:**
+   ```bash
+   npm run preview
+   ```
+
+---
+
+## 📁 Структура проєкту (partials та CSS згідно макету ArtistsHub)
+
+Секції та файли узгоджені з макетом [ArtistsHub (Figma)](https://www.figma.com/design/knhOfrwUVhgwEznVU8lTKL/ArtistsHub--Copy-?node-id=5999-10563):
+
+```
+goit-fullstack-team-javascript-web-rest-responsive-app/
+├── src/
+│   ├── index.html
+│   ├── main.js
+│   ├── css/
+│   │   ├── styles.css      # головний файл, підключає всі partials
+│   │   ├── reset.css
+│   │   ├── base.css
+│   │   ├── container.css
+│   │   ├── header.css
+│   │   ├── hero.css
+│   │   ├── about.css
+│   │   ├── advantages.css
+│   │   ├── assortment.css
+│   │   ├── gallery.css
+│   │   ├── feedbacks.css
+│   │   ├── support.css
+│   │   └── footer.css
+│   ├── partials/
+│   │   ├── header.html
+│   │   ├── hero.html
+│   │   ├── about.html
+│   │   ├── advantages.html
+│   │   ├── assortment.html
+│   │   ├── gallery.html
+│   │   ├── feedbacks.html
+│   │   ├── support.html
+│   │   └── footer.html
+│   ├── js/
+│   │   └── modal.js
+│   └── img/
+├── assets/
+├── package.json
+├── vite.config.js
+├── README.md
+├── README.en.md
+└── README.de.md
 ```
 
-Далі необхідно зайти в налаштування GitHub-репозиторію (`Settings` > `Pages`) та
-виставити роздачу продакшн версії файлів з папки `/root` гілки `gh-pages`, якщо
-це не було зроблено автоматично.
+**Відповідність секцій макету:**
 
-![GitHub Pages settings](./assets/repo-settings.png)
+| Секція макету | Partial | CSS |
+|---------------|---------|-----|
+| Header | `header.html` | `header.css` |
+| Hero | `hero.html` | `hero.css` |
+| About | `about.html` | `about.css` |
+| Advantages | `advantages.html` | `advantages.css` |
+| Assortment | `assortment.html` | `assortment.css` |
+| Gallery | `gallery.html` | `gallery.css` |
+| Feedbacks | `feedbacks.html` | `feedbacks.css` |
+| Support | `support.html` | `support.css` |
+| Footer | `footer.html` | `footer.css` |
 
-### Статус деплою
+---
 
-Статус деплою крайнього коміту відображається іконкою біля його ідентифікатора.
+## ✅ Валідація та якість коду
 
-- **Жовтий колір** - виконується збірка та деплой проекту.
-- **Зелений колір** - деплой завершився успішно.
-- **Червоний колір** - під час лінтингу, збірки чи деплою сталася помилка.
+- HTML: [validator.w3.org](https://validator.w3.org/)
+- CSS: [jigsaw.w3.org/css-validator](https://jigsaw.w3.org/css-validator/)
+- JavaScript: [jshint.com](https://jshint.com/)
 
-Більш детальну інформацію про статус можна переглянути натиснувши на іконку, і в
-вікні, що випадає, перейти за посиланням `Details`.
+---
 
-![Deployment status](./assets/deploy-status.png)
+## 🔗 Супутня інформація та посилання
 
-### Жива сторінка
+- **Макет проєкту:** [ArtistsHub (Figma)](https://www.figma.com/design/knhOfrwUVhgwEznVU8lTKL/ArtistsHub--Copy-?node-id=5999-10563)
 
-Через якийсь час, зазвичай кілька хвилин, живу сторінку можна буде подивитися за
-адресою, вказаною на вкладці `Settings` > `Pages` в налаштуваннях репозиторію.
-Наприклад, ось посилання на живу версію для цього репозиторію
+- **ТЗ:** [Google Таблиці — завдання та посилання](https://docs.google.com/spreadsheets/d/1Uvu-7uy1_HQ4jsMbWwIXgQjs5-V_K20vWAkZrS13QIE/edit?usp=sharing)
+- **Матеріали до командного проєкту (JS Fullstack):** [Презентація Google Slides](https://docs.google.com/presentation/d/1t0l_qImtmiewNc0ZY3J5ll5_ySuybEDZ/edit?usp=sharing)
 
-[https://goitacademy.github.io/vanilla-app-template/](https://goitacademy.github.io/vanilla-app-template/).
+**Посилання з презентації командного проєкту:**
 
-Якщо відкриється порожня сторінка, переконайся, що у вкладці `Console` немає
-помилок пов'язаних з неправильними шляхами до CSS та JS файлів проекту
-(**404**). Швидше за все у тебе неправильне значення прапора `--base` для
-команди `build` у файлі `package.json`.
+- **Організація роботи в команді:** [скринкаст Trello](https://youtu.be/dm89LgP2I9M), [інструкція Trello](https://docs.google.com/document/d/1wR1uYEhxoSm43gW45d57Zv76eR0poCK435Ghe28oo8A/edit?usp=sharing), [принципи роботи в команді — плейлист](https://youtube.com/playlist?list=PLViULGko0FdhgRVatH8770k3zRG3Ke5t7), [презентація принципів](https://docs.google.com/presentation/d/1umIvCoRwtW_TIc4s3bpzYd9nn1VCdfGUBYsOwC84cPg/edit?usp=sharing), [Scrum Poker](https://www.scrumpoker-online.org/)
+- **Планування:** [план роботи над проєктом](https://docs.google.com/document/d/1H1BlZAyJJZfjchq9EC2ry34y42dt6sxl3jg7fP_RRLQ/edit)
+- **GitHub і репозиторій:** [шаблон проєкту (vanilla-app-template)](https://github.com/goitacademy/vanilla-app-template), [скринкаст «Робота з GitHub + термінал»](https://www.loom.com/share/f85971ae4a5d43f7b5e5ad7b2ba9c6bc), [плейлист «Як працювати з репозиторієм»](https://www.youtube.com/playlist?list=PLViULGko0FdhZ99yYnqB64F_4nVyvOPH5)
+- **Технічні вимоги:** [документ вимог](https://docs.google.com/document/d/13GKky-k-pcfEhhFWO4SjyitzPBat258rJEkfj6mivjc/edit), [як здати ДЗ в LMS](https://youtu.be/9Ts2LBsdQfU)
+- **Захист проєкту:** [чек-лист та шаблони презентації](https://docs.google.com/document/d/1cboEr4YJlNMf7ZXdGUqnUIuCSa5jrDTDxbK2vdfOv9o/edit)
 
-## Як це працює
-
-![How it works](./assets/how-it-works.png)
-
-1. Після кожного пуша у гілку `main` GitHub-репозиторію, запускається
-   спеціальний скрипт (GitHub Action) із файлу `.github/workflows/deploy.yml`.
-2. Усі файли репозиторію копіюються на сервер, де проект ініціалізується та
-   проходить лінтинг та збірку перед деплоєм.
-3. Якщо всі кроки пройшли успішно, зібрана продакшн версія файлів проекту
-   відправляється у гілку `gh-pages`. В іншому випадку, у лозі виконання скрипта
-   буде вказано в чому проблема.
+- **Редактори README:** [readme.so](https://readme.so/editor), [dillinger.io](https://dillinger.io/)
+- [Stylelint Rules](https://stylelint.io/user-guide/rules)  
+- [Code Guide](https://codeguide.co/)

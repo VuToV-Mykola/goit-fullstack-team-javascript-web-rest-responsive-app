@@ -1,0 +1,4 @@
+/* Hero: section background override / Hero: перевизначення фону секції */
+.hero {
+  background-color: var(--color-bg-hero);
+}
