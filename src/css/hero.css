@@ -1,4 +1,207 @@
-/* Hero: section background override / Hero: перевизначення фону секції */
+/* Hero: секція — заголовок, опис, кнопка Explore Artists, фонове зображення */
+
+/* Секція та оверлеї градієнтів */
 .hero {
+  position: relative;
   background-color: var(--color-bg-hero);
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(180deg, var(--color-bg-body), rgb(35 19 43 / 0%));
+  pointer-events: none;
+  z-index: 10;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 106px;
+  background: linear-gradient(0deg, var(--color-bg-body), rgb(35 19 43 / 0%));
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Контейнер секції (відступи) */
+.hero .container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Блок: заголовок + опис + кнопка */
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+/* Заголовок H1 */
+.hero-title {
+  font-family: Epilogue, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0 0 20px;
+  color: var(--color-text);
+}
+
+/* Підзаголовок H2 (опис) */
+.hero-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 24px;
+  color: var(--color-text);
+}
+
+/* Кнопка навігації на секцію #artists */
+.explore-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 47px;
+  padding: 10px 24px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background: var(--color-primary);
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  box-shadow:
+    0 1px 2px 0 color-mix(in srgb, var(--color-bg-body) 5%, transparent),
+    inset 0 -2px 1px 0 rgb(0 0 0 / 20%),
+    inset 0 0 0 1px color-mix(in srgb, var(--color-bg-body) 15%, transparent),
+    inset 0 2px 1px 0 rgb(255 255 255 / 25%),
+    inset 0 32px 24px 0 rgb(255 255 255 / 5%);
+  transition: background 0.2s ease-in-out;
+}
+
+.explore-btn:hover,
+.explore-btn:focus {
+  background: color-mix(in srgb, var(--color-primary) 60%, transparent);
+}
+
+/* Блок фонового зображення */
+.bg-image {
+  width: 280px;
+  height: 385px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--color-bg-hero);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("/img/hero/bg-image-mobile.webp");
+}
+
+@media (resolution >= 192dpi) {
+  .bg-image {
+    background-image: url("/img/hero/bg-image-mobile@2x.webp");
+  }
+}
+
+/* Tablet */
+@media only screen and (width >= 768px) {
+  .hero::after {
+    height: 137px;
+  }
+
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .hero-wrapper {
+    align-self: center;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    margin-bottom: 24px;
+    width: 600px;
+  }
+
+  .hero-description {
+    font-size: 20px;
+    margin-bottom: 32px;
+    width: 624px;
+  }
+
+  .explore-btn {
+    width: 246px;
+    align-self: flex-start;
+  }
+
+  .bg-image {
+    width: 704px;
+    height: 632px;
+    background-image: url("/img/hero/bg-image-tablet.webp");
+  }
+}
+
+@media only screen and (width >= 768px) and (resolution >= 192dpi) {
+  .bg-image {
+    background-image: url("/img/hero/bg-image-tablet@2x.webp");
+  }
+}
+
+/* Desktop */
+@media only screen and (width >= 1440px) {
+  .hero {
+    padding: 0;
+  }
+
+  .hero .container {
+    flex-direction: row;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  .hero-wrapper {
+    justify-content: center;
+    width: 672px;
+    margin-bottom: 0;
+  }
+
+  .hero-title {
+    font-size: 84px;
+  }
+
+  .explore-btn {
+    width: 206px;
+  }
+
+  .bg-image {
+    width: 641px;
+    height: 960px;
+    margin: 0;
+    background-image: url("/img/hero/bg-image-desktop.webp");
+  }
+}
+
+@media only screen and (width >= 1440px) and (resolution >= 192dpi) {
+  .bg-image {
+    background-image: url("/img/hero/bg-image-desktop@2x.webp");
+  }
 }

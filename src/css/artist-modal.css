@@ -1,2 +1,3 @@
-/* Artist details modal / Модальне вікно виконавця */
+/* Artist details modal / Модальне вікно — фон/текст з base.css */
 
+/* Стилі модалки використовувати var(--color-bg-body), var(--color-text), var(--color-primary) */

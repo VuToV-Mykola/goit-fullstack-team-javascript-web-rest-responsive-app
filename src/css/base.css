@@ -12,9 +12,12 @@
   /* Text / Текст */
   --color-text: #fff;
 
+  /* Section spacing / Відступи секцій */
+  --section-padding-y: 64px;
+  --section-padding-y-lg: 112px;
+
   /* Body typography / Типографіка body */
-  --font-family-base: "Fira Sans", "IBM Plex Sans", -apple-system, blinkmacsystemfont,
-    "Segoe UI", roboto, helvetica, arial, sans-serif;
+  --font-family-base: "IBM Plex Sans", sans-serif;
   --font-size-base: 16px;
   --line-height-base: 1.5;
   --font-weight-normal: 400;
@@ -51,10 +54,25 @@ body {
   flex-grow: 1;
 }
 
-/* All sections: background and text color / Усі секції: фон і колір тексту */
+/* Усі секції: фон, колір тексту, вертикальні відступи */
 .section {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
   background-color: var(--color-bg-body);
   color: var(--color-text);
+}
+
+/* Сховати візуально, залишити для скрінридерів */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  overflow: hidden;
 }
 
 /* ========== Responsive / Адаптивність ========== */
@@ -73,5 +91,12 @@ body {
   body {
     font-size: 18px;
     line-height: 1.67;
+  }
+}
+
+@media only screen and (width >= 1440px) {
+  .section {
+    padding-top: var(--section-padding-y-lg);
+    padding-bottom: var(--section-padding-y-lg);
   }
 }

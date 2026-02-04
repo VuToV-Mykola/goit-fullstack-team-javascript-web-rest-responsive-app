@@ -1,1 +1,3 @@
-/* About section / Секція про нас */
+/* About section / Секція про нас — наслідує .section, кольори з base.css */
+
+/* Додаткові стилі використовувати var(--color-text), var(--color-primary), var(--font-family-base) */
