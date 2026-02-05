@@ -1,16 +1,19 @@
 /* ========== Container / Контейнер ========== */
 
-/* Брейкпоінти узгоджені з base.css: 768px, 1440px */
+/* Гумова верстка: ширина 100% до max-width. Брейкпоінти: 320px, 768px, 1440px */
 
-/* Styles for Mobile devices */
+/* Mobile: гумовий контейнер від 320px */
 .container {
-  max-width: 375px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
 }
 
-/* Styles for Tablet devices */
+/* Tablet 768px */
 @media only screen and (width >= 768px) {
   .container {
     max-width: 768px;
@@ -19,7 +22,7 @@
   }
 }
 
-/* Styles for Desktop devices */
+/* Desktop 1440px */
 @media only screen and (width >= 1440px) {
   .container {
     max-width: 1440px;

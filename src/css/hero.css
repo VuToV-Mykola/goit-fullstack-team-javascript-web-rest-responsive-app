@@ -3,7 +3,7 @@
 /* Секція та оверлеї градієнтів */
 .hero {
   position: relative;
-  background-color: var(--color-bg-hero);
+  background-color: #23132b;
   overflow: hidden;
   padding-bottom: 0;
 }
@@ -15,7 +15,7 @@
   left: 0;
   right: 0;
   height: 80px;
-  background: linear-gradient(180deg, var(--color-bg-body), rgb(35 19 43 / 0%));
+  background: linear-gradient(180deg, #060307, rgb(35 19 43 / 0%));
   pointer-events: none;
   z-index: 10;
 }
@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   height: 106px;
-  background: linear-gradient(0deg, var(--color-bg-body), rgb(35 19 43 / 0%));
+  background: linear-gradient(0deg, #060307, rgb(35 19 43 / 0%));
   pointer-events: none;
   z-index: 10;
 }
@@ -47,25 +47,23 @@
   margin-bottom: 64px;
 }
 
-/* Заголовок H1 */
+/* Заголовок H1 (reset: margin 0) */
 .hero-title {
   font-family: Epilogue, sans-serif;
   font-weight: 700;
   font-size: 48px;
   line-height: 1.1;
   letter-spacing: -0.01em;
-  margin: 0 0 20px;
-  color: var(--color-text);
+  margin-bottom: 20px;
 }
 
-/* Підзаголовок H2 (опис) */
+/* Підзаголовок H2 (reset: margin 0; base: колір від .section) */
 .hero-description {
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
-  margin: 0 0 24px;
-  color: var(--color-text);
+  margin-bottom: 24px;
 }
+
 
 /* Кнопка навігації на секцію #artists */
 .explore-btn {
@@ -78,16 +76,15 @@
   width: 100%;
   border: none;
   border-radius: 12px;
-  background: var(--color-primary);
-  color: var(--color-text);
+  background: #764191;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
   text-align: center;
   box-shadow:
-    0 1px 2px 0 color-mix(in srgb, var(--color-bg-body) 5%, transparent),
+    0 1px 2px 0 color-mix(in srgb, #060307 5%, transparent),
     inset 0 -2px 1px 0 rgb(0 0 0 / 20%),
-    inset 0 0 0 1px color-mix(in srgb, var(--color-bg-body) 15%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, #060307 15%, transparent),
     inset 0 2px 1px 0 rgb(255 255 255 / 25%),
     inset 0 32px 24px 0 rgb(255 255 255 / 5%);
   transition: background 0.2s ease-in-out;
@@ -95,7 +92,7 @@
 
 .explore-btn:hover,
 .explore-btn:focus {
-  background: color-mix(in srgb, var(--color-primary) 60%, transparent);
+  background: color-mix(in srgb, #764191 60%, transparent);
 }
 
 /* Блок фонового зображення */
@@ -104,7 +101,7 @@
   height: 385px;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--color-bg-hero);
+  background-color: #23132b;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -127,8 +124,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 32px;
-    padding-right: 32px;
   }
 
   .hero-wrapper {
@@ -174,8 +169,6 @@
 
   .hero .container {
     flex-direction: row;
-    padding-left: 64px;
-    padding-right: 64px;
   }
 
   .hero-wrapper {
