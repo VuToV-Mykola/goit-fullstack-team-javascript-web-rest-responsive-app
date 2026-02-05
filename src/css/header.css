@@ -1,2 +1,1 @@
-/* Header (Navbar) / Шапка: темний фон */
-
+/* Header (Navbar) / Шапка — наслідує .section, кольори з base.css (--color-bg-body, --color-text) */
