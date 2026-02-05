@@ -1,6 +1,0 @@
-      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
-     2096    2088    2088      20544  cons0     197610 20:40:31 /c/Program Files/nodejs/node
-     2098       1    2098       2420  cons1     197610 23:32:24 /usr/bin/bash
-     2088    2027    2088       8916  cons0     197610 20:40:28 /usr/bin/bash
-     2027       1    2027      26528  cons0     197610 20:35:28 /usr/bin/bash
-     2228    2098    2228      22208  cons1     197610 23:33:22 /usr/bin/PS
