@@ -104,7 +104,6 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 │   │   ├── base.css
 │   │   ├── container.css
 │   │   ├── header.css
-│   │   ├── header-modal.css
 │   │   ├── hero.css
 │   │   ├── about.css
 │   │   ├── artists.css
@@ -114,7 +113,7 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 │   ├── img/
 │   │   ├── about-us/
 │   │   ├── feedback/
-│   │   ├── hero/
+│   │   └── hero/
 │   ├── js/
 │   │   ├── api-artists.js
 │   │   ├── artist-modal.js
@@ -127,7 +126,6 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 │   │   └── refs.js
 │   ├── partials/
 │   │   ├── header.html
-│   │   ├── header-modal.html
 │   │   ├── hero.html
 │   │   ├── about.html
 │   │   ├── artists.html
@@ -136,6 +134,7 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 │   │   └── footer.html
 │   ├── public/
 │   │   ├── favicon.svg
+│   │   ├── logo.svg
 │   │   └── img/
 │   │       └── sprite.svg
 │   ├── index.html
@@ -157,7 +156,6 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 | Секція макету | Partial | CSS |
 |---------------|---------|-----|
 | Header | `header.html` | `header.css` |
-| Header Modal | `header-modal.html` | `header-modal.css` |
 | Hero | `hero.html` | `hero.css` |
 | About | `about.html` | `about.css` |
 | Artists | `artists.html` | `artists.css` |
