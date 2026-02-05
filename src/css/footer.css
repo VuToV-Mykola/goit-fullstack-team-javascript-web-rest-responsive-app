@@ -1,1 +1,157 @@
-/* Footer / Підвал — наслідує .section, кольори з base.css (--color-bg-body, --color-text) */
+/* Footer: підвал — навігація, соцмережі, копірайт */
+
+/* Секція: відступи, перевизначення .section */
+.footer.section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/* Обгортка: лого + навігація, роздільник знизу */
+.footer-wrapper {
+  padding-bottom: 48px;
+  text-align: center;
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+}
+
+/* Блок: соцмережі + копірайт */
+.footer-bottom {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Навігація: лого та посилання */
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Логотип (посилання на головну) */
+.footer-nav-logo {
+  display: inline-block;
+  width: 116px;
+  height: 36px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.footer-nav-logo:hover,
+.footer-nav-logo:focus {
+  opacity: 0.6;
+}
+
+.footer-logo-icon {
+  fill: var(--color-primary);
+}
+
+/* Список посилань навігації */
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+}
+
+/* Посилання навігації */
+.footer-nav-link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: var(--line-height-base);
+  display: inline-block;
+  color: var(--color-text);
+  transition: opacity 0.2s ease-in-out;
+}
+
+.footer-nav-link:hover,
+.footer-nav-link:focus {
+  opacity: 0.6;
+}
+
+/* Список соцмереж */
+.footer-socials-list {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-socials-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-socials-link {
+  display: inline-block;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+  opacity: 0.6;
+}
+
+/* Іконки соцмереж */
+.footer-social-svg {
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill: var(--color-text);
+  overflow: hidden;
+}
+
+/* Копірайт */
+.footer-copyrights {
+  font-weight: var(--font-weight-normal);
+  font-size: 16px;
+  line-height: var(--line-height-base);
+  margin: 0;
+  color: var(--color-text);
+  text-align: center;
+}
+
+/* Tablet */
+@media only screen and (width >= 768px) {
+  .footer.section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .footer-wrapper {
+    padding-bottom: 80px;
+  }
+
+  .footer-bottom {
+    margin-top: 32px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .footer-nav-logo {
+    height: 45px;
+  }
+
+  .footer-list {
+    flex-direction: row;
+  }
+
+  .footer-socials-list {
+    gap: 24px;
+  }
+
+  .footer-social-svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Desktop */
+@media only screen and (width >= 1440px) {
+  .footer-social-svg {
+    width: 24px;
+    height: 24px;
+  }
+}
