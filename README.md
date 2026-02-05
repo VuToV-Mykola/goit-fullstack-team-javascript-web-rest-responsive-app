@@ -115,7 +115,6 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 │   │   ├── about-us/
 │   │   ├── feedback/
 │   │   ├── hero/
-│   │   └── sprite.svg
 │   ├── js/
 │   │   ├── api-artists.js
 │   │   ├── artist-modal.js
