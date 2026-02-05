@@ -1,5 +1,95 @@
 <!-- htmlhint doctype-first:false -->
+<!-- !!!section FOOTER!!! -->
+<!-- Українською: Підвал сторінки (футер) / English: Page footer -->
 <footer class="footer section">
   <!-- Українською: Тематична група контенту / English: Thematic content group -->
-  <h2 class="footer-title" id="footer-title-id">Footer</h2>
+  <!-- Українською: Універсальний контейнер / English: Universal container -->
+  <div class="container">
+    <!-- Українською: Обгортка блоку навігації / English: Nav block wrapper -->
+    <div class="footer-wrapper">
+      <!-- Українською: Блок навігації (лого + посилання) / English: Nav block (logo + links) -->
+      <nav class="footer-nav">
+        <!-- Українською: Посилання на головну (логотип) / English: Link to home (logo) -->
+        <a class="footer-nav-logo" href="./index.html">
+          <!-- Українською: Іконка логотипу / English: Logo icon -->
+          <svg class="footer-logo-icon" width="116" height="36">
+            <use href="/img/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <!-- Українською: Список посилань навігації по сторінці / English: In-page navigation links list -->
+        <ul class="footer-list">
+          <!-- Українською: Пункт навігації / English: Nav item -->
+          <li class="footer-nav-item">
+            <!-- Українською: Посилання на секцію «Артисти» / English: Link to Artists section -->
+            <a class="footer-nav-link" href="#artists-js">Artists</a>
+          </li>
+          <!-- Українською: Пункт навігації / English: Nav item -->
+          <li class="footer-nav-item">
+            <!-- Українською: Посилання на секцію «Про нас» / English: Link to About us section -->
+            <a class="footer-nav-link" href="#about-js">About us</a>
+          </li>
+          <!-- Українською: Пункт навігації / English: Nav item -->
+          <li class="footer-nav-item">
+            <!-- Українською: Посилання на секцію «Відгуки» / English: Link to Reviews section -->
+            <a class="footer-nav-link" href="#feedback-js">Reviews</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Українською: Блок соцмереж та авторських прав / English: Socials and copyright block -->
+    <div class="footer-bottom">
+      <!-- Українською: Список іконок соціальних мереж / English: Social network icons list -->
+      <ul class="footer-socials-list">
+        <!-- Українською: Пункт соцмережі (YouTube) / English: Social item (YouTube) -->
+        <li class="footer-socials-item">
+          <!-- Українською: Посилання на YouTube (нова вкладка) / English: YouTube link (new tab) -->
+          <a
+            class="footer-socials-link"
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            ><svg class="footer-social-svg" width="40" height="40">
+              <!-- Українською: Іконка YouTube / English: YouTube icon -->
+              <use href="/img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+        <!-- Українською: Пункт соцмережі (Instagram) / English: Social item (Instagram) -->
+        <li class="footer-socials-item">
+          <!-- Українською: Посилання на Instagram (нова вкладка) / English: Instagram link (new tab) -->
+          <a
+            class="footer-socials-link"
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            ><svg class="footer-social-svg" width="40" height="40">
+              <!-- Українською: Іконка Instagram / English: Instagram icon -->
+              <use href="/img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <!-- Українською: Пункт соцмережі (Facebook) / English: Social item (Facebook) -->
+        <li class="footer-socials-item">
+          <!-- Українською: Посилання на Facebook (нова вкладка) / English: Facebook link (new tab) -->
+          <a
+            class="footer-socials-link"
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            ><svg class="footer-social-svg" width="40" height="40">
+              <!-- Українською: Іконка Facebook / English: Facebook icon -->
+              <use href="/img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <!-- Українською: Авторські права (копірайт) / English: Copyright -->
+      <p class="footer-copyrights">
+        &copy; 2025 ArtistsHub. All rights reserved.
+      </p>
+    </div>
+  </div>
 </footer>
