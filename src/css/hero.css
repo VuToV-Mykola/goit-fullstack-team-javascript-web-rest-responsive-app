@@ -1,5 +1,4 @@
-/* Hero */
-
+/* Mobile 320px */
 .hero {
   position: relative;
   background-color: #23132b;
@@ -32,7 +31,8 @@
 }
 
 .hero .container {
-  padding: 0 20px;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .hero-wrapper {
@@ -40,17 +40,17 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  width: 100%;
+  width: 288px;
+  max-width: 100%;
   height: auto;
   margin-bottom: 64px;
 }
 
-/* Заголовок H1 */
 .hero-title {
   font-family: Epilogue, sans-serif;
   margin-bottom: 20px;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 44px;
   line-height: 1.1;
   letter-spacing: -0.01em;
 }
@@ -71,8 +71,10 @@
   border: none;
   border-radius: 12px;
   padding: 0;
-  width: 100%;
+  width: 288px;
+  max-width: 100%;
   height: 47px;
+  box-sizing: border-box;
   box-shadow:
     0 1px 2px 0 rgb(6 3 7 / 5%),
     inset 0 -2px 1px 0 rgb(0 0 0 / 20%),
@@ -95,7 +97,7 @@
 
 .bg-image {
   background-color: #23132b;
-  width: 280px;
+  width: 288px;
   height: 385px;
   margin: auto;
   background-repeat: no-repeat;
@@ -104,13 +106,13 @@
   background-image: url("/img/hero/bg-image-mobile.webp");
 }
 
-@media (resolution >= 192dpi) {
+@media (width <= 767px) and (resolution >= 192dpi) {
   .bg-image {
     background-image: url("/img/hero/bg-image-mobile@2x.webp");
   }
 }
 
-/* --------- TABLET --------- */
+/* Tablet 768px */
 @media only screen and (width >= 768px) {
   .hero::after {
     height: 137px;
@@ -122,10 +124,11 @@
     align-items: center;
     justify-content: center;
     padding: 0 32px;
+    box-sizing: border-box;
   }
 
   .hero-wrapper {
-    width: 100%;
+    width: 704px;
     align-self: center;
     margin-bottom: 32px;
   }
@@ -148,6 +151,7 @@
     align-self: flex-start;
     padding: 0;
     margin: 0;
+    max-width: none;
   }
 
   .bg-image {
@@ -160,13 +164,13 @@
   }
 }
 
-@media only screen and (width >= 321px) and (width <= 768px) and (resolution >= 192dpi) {
+@media only screen and (width >= 768px) and (width <= 1439px) and (resolution >= 192dpi) {
   .bg-image {
     background-image: url("/img/hero/bg-image-tablet@2x.webp");
   }
 }
 
-/* --------- DESKTOP --------- */
+/* Desktop 1440px */
 @media only screen and (width >= 1440px) {
   .hero {
     padding: 0;
@@ -175,6 +179,7 @@
   .hero .container {
     flex-direction: row;
     padding: 0 64px;
+    box-sizing: border-box;
   }
 
   .hero-wrapper {
@@ -191,6 +196,7 @@
   .explore-btn {
     width: 206px;
     margin: 0;
+    max-width: none;
   }
 
   .bg-image {
@@ -201,7 +207,7 @@
   }
 }
 
-@media (width >= 1440px) and (resolution >= 192dpi) {
+@media only screen and (width >= 1440px) and (resolution >= 192dpi) {
   .bg-image {
     background-image: url("/img/hero/bg-image-desktop@2x.webp");
   }
