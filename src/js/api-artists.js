@@ -1,11 +1,7 @@
 import axios from 'axios';
+import {API_BASE, DEFAULT_PAGE, ARTISTS_PAGE_LIMIT} from './config.js';
 
-export const API_BASE = 'https://sound-wave.b.goit.study/api';
-
-export let currentPage = 1;
-export const limit = 8;
-
-export async function fetchArtists(page = currentPage, perPage = limit) {
+export async function fetchArtists(page = DEFAULT_PAGE, perPage = ARTISTS_PAGE_LIMIT) {
   const response = await axios.get(`${API_BASE}/artists`, {
     params: {
       page,
@@ -33,6 +29,6 @@ export async function fetchFeedbacks() {
     const response = await axios.get(`${API_BASE}/feedbacks`);
     return response.data;
   } catch (error) {
-    throw new Error('Failed to load feedbacks');
+    throw new Error('Failed to load feedbacks', {cause: error});
   }
 }
