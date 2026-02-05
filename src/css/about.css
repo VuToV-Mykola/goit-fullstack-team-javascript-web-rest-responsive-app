@@ -1,3 +1,96 @@
-/* About section / Секція про нас — наслідує .section, кольори з base.css */
+/* About: секція про нас — зображення команди, іконка, заголовок, опис */
 
-/* Додаткові стилі використовувати var(--color-text), var(--color-primary), var(--font-family-base) */
+/* Обгортка: колонка на mobile/tablet, ряд на desktop */
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+/* Блок зображення команди */
+.about-image {
+  width: 100%;
+}
+
+/* Зображення команди (responsive) */
+.about-img {
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+}
+
+/* Блок: іконка + заголовок + опис */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 280px;
+}
+
+/* Іконка логотипу */
+.about-icon {
+  width: 64px;
+  height: 64px;
+  fill: var(--color-text);
+}
+
+/* Заголовок H2 */
+.about-title {
+  font-family: Epilogue, sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--color-text);
+}
+
+/* Опис (абзац) */
+.about-description {
+  font-weight: var(--font-weight-normal);
+  font-size: 18px;
+  line-height: var(--line-height-base);
+  margin: 0;
+  color: var(--color-text);
+}
+
+/* Tablet */
+@media only screen and (width >= 768px) {
+  .about-wrapper {
+    gap: 24px;
+  }
+
+  .about-content {
+    max-width: 704px;
+    gap: 24px;
+  }
+
+  .about-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .about-description {
+    font-size: 20px;
+  }
+}
+
+/* Desktop */
+@media only screen and (width >= 1440px) {
+  .about-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+  }
+
+  .about-title {
+    font-size: 60px;
+  }
+
+  .about-content {
+    max-width: 640px;
+  }
+}
