@@ -81,19 +81,22 @@ Die Sektionen und Dateien entsprechen dem Design [ArtistsHub (Figma)](https://ww
 ```
 goit-fullstack-team-javascript-web-rest-responsive-app/
 ├── .github/
+│   ├── FUNDING.yml
 │   └── workflows/
 │       ├── deploy.yml
 │       └── screenshot-and-visitor.yaml
 ├── assets/
-│   └── db/
-│       ├── likes-badge.json
-│       ├── manual-likes.json
-│       ├── repo-license.json
-│       ├── repo-size.json
-│       ├── stargazers.json
-│       ├── stats-data.json
-│       ├── unique-users.json
-│       └── visitors-badge.json
+│   ├── db/
+│   │   ├── likes-badge.json
+│   │   ├── manual-likes.json
+│   │   ├── repo-license.json
+│   │   ├── repo-size.json
+│   │   ├── stargazers.json
+│   │   ├── stats-data.json
+│   │   ├── tech-badges.txt
+│   │   ├── unique-users.json
+│   │   └── visitors-badge.json
+│   └── screenshot.png
 ├── src/
 │   ├── css/
 │   │   ├── styles.css      # Einstieg, bindet alle Partials ein
@@ -101,6 +104,7 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 │   │   ├── base.css
 │   │   ├── container.css
 │   │   ├── header.css
+│   │   ├── header-modal.css
 │   │   ├── hero.css
 │   │   ├── about.css
 │   │   ├── artists.css
@@ -108,11 +112,23 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 │   │   ├── artist-modal.css
 │   │   └── footer.css
 │   ├── img/
-│   │   └── icons.svg
+│   │   ├── about-us/
+│   │   ├── feedback/
+│   │   ├── hero/
+│   │   └── sprite.svg
 │   ├── js/
-│   │   └── modal.js
+│   │   ├── api-artists.js
+│   │   ├── artist-modal.js
+│   │   ├── config.js
+│   │   ├── feedback-modal.js
+│   │   ├── feedback.js
+│   │   ├── header-mob-menu.js
+│   │   ├── hero.js
+│   │   ├── modal.js
+│   │   └── refs.js
 │   ├── partials/
 │   │   ├── header.html
+│   │   ├── header-modal.html
 │   │   ├── hero.html
 │   │   ├── about.html
 │   │   ├── artists.html
@@ -140,12 +156,50 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 | Mockup-Sektion | Partial | CSS |
 |----------------|---------|-----|
 | Header | `header.html` | `header.css` |
+| Header-Modal | `header-modal.html` | `header-modal.css` |
 | Hero | `hero.html` | `hero.css` |
 | About | `about.html` | `about.css` |
 | Artists | `artists.html` | `artists.css` |
 | Feedback | `feedback.html` | `feedback.css` |
 | Artist Details Modal | `artist-modal.html` | `artist-modal.css` |
 | Footer | `footer.html` | `footer.css` |
+
+---
+
+## 👥 Teammitglieder
+
+1) **Team lead Vutov Mykola**
+- [x] GitHubName: VuToV-Mykola - GitHubNick: VuToV-Mykola  
+GitHub Team Project Repositories: https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app  
+GitHub Pages: https://vutov-mykola.github.io/goit-fullstack-team-javascript-web-rest-responsive-app/
+
+2) **Scrum master Vladimir Kostik**
+- [x] GitHubName: VladimirKostik - GitHubNick: VladimirKostik  
+Trello-Board: https://trello.com/invite/b/6983854b2b91b6cce8c6cb1f/ATTI7a3fbac5afba7f60b5aabaddf40a90860123F1DD/project-javascript
+
+3) **Backend master Elina Warzer**
+- [x] GitHubName: Elina Reznichenko - GitHubNick: EllieReznichenko
+
+4) **Developer Oleksandr Chernyshov**
+- [x] GitHubName: Oleksandr Chernyshov - GitHubNick: AlPetrChernyshov
+
+5) **Developer Mariam**
+- [x] GitHubName: Mariam - GitHubNick: MariamPadalka
+
+6) **Developer Oleksandr Sheveria**
+- [x] GitHubName: OleksandrShevk - GitHubNick: Shevk1n
+
+7) **Developer Tetiana Zinovieva**
+- [x] GitHubName: Tetiana Zinovieva - GitHubNick: TaliaZcoder
+
+8) **Developer Svetlana Tokarenko**
+- [x] GitHubName: _______ - GitHubNick: _______
+
+9) **Developer Lidia 01**
+- [x] GitHubName: _______ - GitHubNick: _______
+
+10) **Developer Oleh Levchenko**
+- [x] GitHubName: _______ - GitHubNick: _______
 
 ---
 
