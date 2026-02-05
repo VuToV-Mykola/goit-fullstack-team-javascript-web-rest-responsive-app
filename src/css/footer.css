@@ -44,7 +44,7 @@
 }
 
 .footer-logo-icon {
-  fill: var(--color-primary);
+  fill: #764191;
 }
 
 /* Список посилань навігації */
@@ -55,13 +55,11 @@
   justify-content: center;
 }
 
-/* Посилання навігації */
+/* Посилання навігації (reset: a; base: колір від .section) */
 .footer-nav-link {
   font-weight: 600;
   font-size: 16px;
-  line-height: var(--line-height-base);
   display: inline-block;
-  color: var(--color-text);
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -99,17 +97,13 @@
   display: block;
   width: 40px;
   height: 40px;
-  fill: var(--color-text);
+  fill: #fff;
   overflow: hidden;
 }
 
-/* Копірайт */
+/* Копірайт (reset: p margin 0; base: font, колір від body/.section) */
 .footer-copyrights {
-  font-weight: var(--font-weight-normal);
   font-size: 16px;
-  line-height: var(--line-height-base);
-  margin: 0;
-  color: var(--color-text);
   text-align: center;
 }
 

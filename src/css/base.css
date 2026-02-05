@@ -1,68 +1,35 @@
-/* Design tokens / Змінні дизайну */
-
-:root {
-  /* Backgrounds / Фони */
-  --color-bg-dark: #060610;
-  --color-bg-hero: #23132b;
-  --color-bg-body: #060307;
-
-  /* Primary (buttons, accents) / Основний акцент */
-  --color-primary: #764191;
-
-  /* Text / Текст */
-  --color-text: #fff;
-
-  /* Section spacing / Відступи секцій */
-  --section-padding-y: 64px;
-  --section-padding-y-lg: 112px;
-
-  /* Body typography / Типографіка body */
-  --font-family-base: "IBM Plex Sans", sans-serif;
-  --font-size-base: 16px;
-  --line-height-base: 1.5;
-  --font-weight-normal: 400;
-}
-
 /* ========== Body / Тіло сторінки ========== */
 
-/* Global layout & type / Глобальний layout та типографіка */
-
+/* Адаптивність: 320px (mobile), 768px (tablet), 1440px (desktop) */
 body {
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height-base);
-  color: var(--color-text);
-  background-color: var(--color-bg-body);
-
-  /* Font rendering / Рендеринг шрифтів */
+  min-width: 320px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #060307;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* Smooth scroll for anchors / Плавний скрол для якорів */
   scroll-behavior: smooth;
-
-  /* Flex layout: sticky footer / Flex layout: footer внизу */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Main content grows to push footer down / Основний контент розтягується, footer внизу */
 .page-main {
   flex-grow: 1;
 }
 
-/* Усі секції: фон, колір тексту, вертикальні відступи */
+/* Усі секції: фон, колір, вертикальні відступи */
 .section {
-  padding-top: var(--section-padding-y);
-  padding-bottom: var(--section-padding-y);
-  background-color: var(--color-bg-body);
-  color: var(--color-text);
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: #060307;
+  color: #fff;
 }
 
-/* Сховати візуально, залишити для скрінридерів */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -75,10 +42,7 @@ body {
   overflow: hidden;
 }
 
-/* ========== Responsive / Адаптивність ========== */
-
-/* Tablet / Планшет */
-
+/* Tablet 768px */
 @media only screen and (width >= 768px) {
   body {
     font-size: 18px;
@@ -86,17 +50,15 @@ body {
   }
 }
 
-/* Desktop / Десктоп */
-@media only screen and (width >= 1200px) {
+/* Desktop 1440px */
+@media only screen and (width >= 1440px) {
   body {
     font-size: 18px;
     line-height: 1.67;
   }
-}
 
-@media only screen and (width >= 1440px) {
   .section {
-    padding-top: var(--section-padding-y-lg);
-    padding-bottom: var(--section-padding-y-lg);
+    padding-top: 112px;
+    padding-bottom: 112px;
   }
 }

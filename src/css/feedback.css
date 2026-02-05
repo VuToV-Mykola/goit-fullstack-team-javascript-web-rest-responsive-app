@@ -1,3 +1,1 @@
-/* Feedback section / Секція відгуків — наслідує .section, токени з base.css */
-
-/* Додаткові стилі використовувати var(--color-text), var(--color-primary), var(--section-padding-y) */
+/* Секція відгуків — наслідує .section. #fff, #764191. Адаптивність: 320 / 768 / 1440px */

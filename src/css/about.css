@@ -13,11 +13,10 @@
   width: 100%;
 }
 
-/* Зображення команди (responsive) */
+/* Зображення команди (reset: img max-width 100%, height auto) */
 .about-img {
   border-radius: 16px;
   width: 100%;
-  height: auto;
 }
 
 /* Блок: іконка + заголовок + опис */
@@ -33,28 +32,23 @@
 .about-icon {
   width: 64px;
   height: 64px;
-  fill: var(--color-text);
+  fill: #fff;
 }
 
-/* Заголовок H2 */
+/* Заголовок H2 (reset: margin 0; base: колір від .section) */
 .about-title {
   font-family: Epilogue, sans-serif;
   font-weight: 700;
   font-size: 44px;
   line-height: 1.2;
   letter-spacing: -0.01em;
-  margin: 0;
-  color: var(--color-text);
 }
 
-/* Опис (абзац) */
+/* Опис (reset: p margin 0; base: font-weight, line-height від body) */
 .about-description {
-  font-weight: var(--font-weight-normal);
   font-size: 18px;
-  line-height: var(--line-height-base);
-  margin: 0;
-  color: var(--color-text);
 }
+
 
 /* Tablet */
 @media only screen and (width >= 768px) {
