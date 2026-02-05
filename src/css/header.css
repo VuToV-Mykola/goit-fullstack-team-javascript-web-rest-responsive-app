@@ -1,1 +1,222 @@
 /* Header (Navbar) / Шапка — 320px, 768px, 1440px */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*По кліку на елементи навігації повинен відбутись плавний перехід до відповідної секції сторінки. Після даного переходу хедер не повинен перекривати контент відповідної секції.*/
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+header {
+    /* 2 Хедер повинен бути фіксованим.*/
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 996; 
+  background-color: #060307;
+}
+main {
+  padding-top: 80px; 
+}
+.header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: relative;
+  z-index: 992;
+}
+
+logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  z-index: 993;
+  position: relative;
+  padding-left: 10px;
+}
+
+.logo img {
+  display: block;
+  height: 30px;
+  width: 106px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  gap: 4px;
+  padding-right: 8px;
+  z-index: 991;
+  position: relative;
+}
+
+.burger span {
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.burger span {
+  width: 24px;
+}
+
+
+.nav {
+    /*4 На мобільних пристроях навігаційне меню ховається в бургер-меню.*/
+    /*7 Бургер-меню повинно займати всю ширину та висоту вікна браузера.*/
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #060307;
+  z-index: 900;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 39px;
+  padding-top: 80px;
+  transition: opacity 0.3s ease;
+}
+
+/*6 При кліку на бургер-меню з'являється вертикальне меню з пунктами навігації.*/
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-list a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.5;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  cursor: pointer;
+  position: relative;
+  z-index: 992;
+}
+ 
+/* 4 На мобільних пристроях навігаційне меню ховається в бургер-меню.*/
+/*6 При кліку на бургер-меню з'являється вертикальне меню з пунктами навігації.*/
+/*8 При кліку на кнопку “хрестик“ бургер-меню повинно закриватись.*/
+.nav-toggle:checked ~ .nav {
+  display: flex;
+}
+
+.nav-toggle:checked ~ .burger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  width: 24px;
+}
+
+.nav-toggle:checked ~ .burger span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle:checked ~ .burger span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  width: 24px;
+}
+
+/* 4 На мобільних пристроях навігаційне меню ховається в бургер-меню.*/
+
+@media (min-width: 768px) {
+  .burger,
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav {
+    display: flex !important;
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: none;
+    padding-top: 0;
+    margin-top: 0;
+    padding-right: 32px;
+  }
+
+  .logo {
+    padding-left: 32px;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .nav-list li {
+    border: none;
+  }
+
+  .nav-list a {
+    padding: 0;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .header-container {
+    padding: 0 64px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .logo {
+    font-size: 28px;
+  }
+
+  .nav-list {
+    gap: 32px;
+  }
+
+  .header-container {
+    padding: 0 64px;
+  }
+
+  .nav {
+    padding-right: 0px;
+  }
+
+  .logo {
+    padding-left: 0px;
+  }
+}
