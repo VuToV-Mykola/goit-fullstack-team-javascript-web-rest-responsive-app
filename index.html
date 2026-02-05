@@ -34,21 +34,39 @@
     <title>ArtistsHub — платформа для артистів</title>
     <!-- Українською: Заголовок сторінки (вкладка браузера) / English: Page title (browser tab) -->
     <script type="module" crossorigin src="/goit-fullstack-team-javascript-web-rest-responsive-app/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-fullstack-team-javascript-web-rest-responsive-app/assets/index-BWeK2M2k.css">
+    <link rel="stylesheet" crossorigin href="/goit-fullstack-team-javascript-web-rest-responsive-app/assets/index-CTMngR96.css">
   </head>
   <!--!!! BODY !!!-->
   <body class="page">
     <header class="page-header">
       <!-- Українською: Верхня частина сторінки (лого, навігація) / English: Top section (logo, navigation) -->
-      <!-- htmlhint doctype-first:false -->
-<header class="header section">
-  <!-- Українською: Тематична група контенту / English: Thematic content group -->
-  <h2 class="header-title" id="header-title-id">Header</h2>
-  <p class="page-text">
-  <!-- Українською: Абзац / English: Paragraph -->
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est officiis repellat sapiente dolorem repudiandae, ipsam veritatis earum magnam qui iusto, dicta nam quidem quod et odio ex cum aut aperiam.
-  </p>
-</header>
+      <div class="header-container">
+<!-- 3. При натисканні на логотип користувач завжди повертається на головну сторінку.-->
+  <a href="/" class="logo">
+    <img src="/goit-fullstack-team-javascript-web-rest-responsive-app/logo.svg" alt="ArtistsHub" />
+  </a>
+
+<!-- 5 При кліку на бургер-меню з'являється вертикальне меню з пунктами навігації.-->
+
+<!--8 При кліку на кнопку “хрестик“ бургер-меню повинно закриватись.-->
+<!--<input type="checkbox"> — источник состояния
+<label for="menu-toggle"> — кнопка, которая:
+при клике включает / выключает checkbox-->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+  <label for="nav-toggle" class="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="#artists-js">Artists</a></li>
+      <li><a href="#about-js">About Us</a></li>
+      <li><a href="#feedback-js">Reviews</a></li>
+    </ul>
+  </nav>
+</div>
 
       
     </header>
