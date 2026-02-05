@@ -1,41 +1,39 @@
-/* About: секція про нас — зображення команди, іконка, заголовок, опис */
-
-/* Обгортка: колонка на mobile/tablet, ряд на desktop */
+/* Mobile 320px */
 .about-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 48px;
+  box-sizing: border-box;
 }
 
-/* Блок зображення команди */
 .about-image {
-  width: 100%;
+  width: 288px;
+  max-width: 100%;
 }
 
-/* Зображення команди (reset: img max-width 100%, height auto) */
 .about-img {
   border-radius: 16px;
-  width: 100%;
+  width: 288px;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Блок: іконка + заголовок + опис */
 .about-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  max-width: 280px;
+  max-width: 288px;
 }
 
-/* Іконка логотипу */
 .about-icon {
   width: 64px;
   height: 64px;
   fill: #fff;
 }
 
-/* Заголовок H2 (reset: margin 0; base: колір від .section) */
 .about-title {
   font-family: Epilogue, sans-serif;
   font-weight: 700;
@@ -44,16 +42,24 @@
   letter-spacing: -0.01em;
 }
 
-/* Опис (reset: p margin 0; base: font-weight, line-height від body) */
 .about-description {
   font-size: 18px;
 }
 
-
-/* Tablet */
+/* Tablet 768px */
 @media only screen and (width >= 768px) {
   .about-wrapper {
     gap: 24px;
+  }
+
+  .about-image {
+    width: 704px;
+    max-width: 100%;
+  }
+
+  .about-img {
+    width: 704px;
+    max-width: 100%;
   }
 
   .about-content {
@@ -71,13 +77,23 @@
   }
 }
 
-/* Desktop */
+/* Desktop 1440px */
 @media only screen and (width >= 1440px) {
   .about-wrapper {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     gap: 32px;
+  }
+
+  .about-image {
+    width: 640px;
+    max-width: none;
+  }
+
+  .about-img {
+    width: 640px;
+    max-width: none;
   }
 
   .about-title {
