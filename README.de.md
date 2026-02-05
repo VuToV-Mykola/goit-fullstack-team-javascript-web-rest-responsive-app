@@ -136,7 +136,9 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 │   │   ├── artist-modal.html
 │   │   └── footer.html
 │   ├── public/
-│   │   └── favicon.svg
+│   │   ├── favicon.svg
+│   │   └── img/
+│   │       └── sprite.svg
 │   ├── index.html
 │   └── main.js
 ├── .gitignore
@@ -168,38 +170,37 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 
 ## 👥 Teammitglieder
 
-1) **Team lead Vutov Mykola**
-- [x] GitHubName: VuToV-Mykola - GitHubNick: VuToV-Mykola  
-GitHub Team Project Repositories: https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app  
-GitHub Pages: https://vutov-mykola.github.io/goit-fullstack-team-javascript-web-rest-responsive-app/
+1. **Team lead Vutov Mykola**
+   - [x] GitHubName: VuToV-Mykola — GitHubNick: VuToV-Mykola  
+   - GitHub: [Repository](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app) · [GitHub Pages](https://vutov-mykola.github.io/goit-fullstack-team-javascript-web-rest-responsive-app/)
 
-2) **Scrum master Vladimir Kostik**
-- [x] GitHubName: VladimirKostik - GitHubNick: VladimirKostik  
-Trello-Board: https://trello.com/invite/b/6983854b2b91b6cce8c6cb1f/ATTI7a3fbac5afba7f60b5aabaddf40a90860123F1DD/project-javascript
+2. **Scrum master Vladimir Kostik**
+   - [x] GitHubName: VladimirKostik — GitHubNick: VladimirKostik  
+   - [Trello-Board](https://trello.com/invite/b/6983854b2b91b6cce8c6cb1f/ATTI7a3fbac5afba7f60b5aabaddf40a90860123F1DD/project-javascript)
 
-3) **Backend master Elina Warzer**
-- [x] GitHubName: Elina Reznichenko - GitHubNick: EllieReznichenko
+3. **Backend master Elina Warzer**
+   - [x] GitHubName: Elina Reznichenko — GitHubNick: EllieReznichenko
 
-4) **Developer Oleksandr Chernyshov**
-- [x] GitHubName: Oleksandr Chernyshov - GitHubNick: AlPetrChernyshov
+4. **Developer Oleksandr Chernyshov**
+   - [x] GitHubName: Oleksandr Chernyshov — GitHubNick: AlPetrChernyshov
 
-5) **Developer Mariam**
-- [x] GitHubName: Mariam - GitHubNick: MariamPadalka
+5. **Developer Mariam**
+   - [x] GitHubName: Mariam — GitHubNick: MariamPadalka
 
-6) **Developer Oleksandr Sheveria**
-- [x] GitHubName: OleksandrShevk - GitHubNick: Shevk1n
+6. **Developer Oleksandr Sheveria**
+   - [x] GitHubName: OleksandrShevk — GitHubNick: Shevk1n
 
-7) **Developer Tetiana Zinovieva**
-- [x] GitHubName: Tetiana Zinovieva - GitHubNick: TaliaZcoder
+7. **Developer Tetiana Zinovieva**
+   - [x] GitHubName: Tetiana Zinovieva — GitHubNick: TaliaZcoder
 
-8) **Developer Svetlana Tokarenko**
-- [x] GitHubName: _______ - GitHubNick: _______
+8. **Developer Svetlana Tokarenko**
+   - [x] GitHubName: _______ — GitHubNick: _______
 
-9) **Developer Lidia 01**
-- [x] GitHubName: _______ - GitHubNick: _______
+9. **Developer Lidia 01**
+   - [x] GitHubName: _______ — GitHubNick: _______
 
-10) **Developer Oleh Levchenko**
-- [x] GitHubName: _______ - GitHubNick: _______
+10. **Developer Oleh Levchenko**
+    - [x] GitHubName: _______ — GitHubNick: _______
 
 ---
 
