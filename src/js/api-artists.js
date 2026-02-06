@@ -25,7 +25,7 @@ async function fetchArtists() {
 
         renderArtists(data.artists);
 
-        if (data.data.length < PER_PAGE) {
+        if (data.artists.length < PER_PAGE) {
             loadMoreBtn.classList.add('is-hidden');
         } else {
             loadMoreBtn.classList.remove('is-hidden');
@@ -47,10 +47,22 @@ export function renderArtists(artists) {
 
   const markup = artists
     .map(({ _id, strArtist, strArtistThumb, genres, strBiographyEN}) => {
+        const genresMarkup = genres
+            .map(
+                genre => `<span class="artist-genre">${genre}</span>`
+            )
+            .join('');
+
+      
       return `
         <li class="artist-card" data-id="${_id}">
+
+          <div class="artist-thumb">
           <img src="${strArtistThumb}" alt="${strArtist}" class="artist-img" />
-          <p class="artist-genres">${genres.join(', ')}</p>
+          </div>
+
+          <p class="artist-genres">${genresMarkup}</p>
+
           <h3 class="artist-name">${strArtist}</h3>
           <p class="artist-bio">${strBiographyEN}</p>
           <button class="artist-more">Learn more</button>
