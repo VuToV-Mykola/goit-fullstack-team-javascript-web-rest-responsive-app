@@ -34,7 +34,7 @@
     <title>ArtistsHub — платформа для артистів</title>
     <!-- Українською: Заголовок сторінки (вкладка браузера) / English: Page title (browser tab) -->
     <script type="module" crossorigin src="/goit-fullstack-team-javascript-web-rest-responsive-app/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-fullstack-team-javascript-web-rest-responsive-app/assets/index-CCyDw1rR.css">
+    <link rel="stylesheet" crossorigin href="/goit-fullstack-team-javascript-web-rest-responsive-app/assets/index-EsLgWB36.css">
   </head>
   <!--!!! BODY !!!-->
   <body class="page">
@@ -104,10 +104,17 @@
 </section>
 
       <!--!!! artists !!!-->
-      <!-- htmlhint doctype-first:false -->
-<section class="artists section" id="artists-js" aria-labelledby="artists-title">
-  <!-- Українською: Тематична група контенту / English: Thematic content group -->
-  <h2 class="artists-title" id="artists-title">Artists</h2>
+      <section class="artists section" id="artists">
+  <div class="artists-container">
+    <h2 class="artists-title">Artists</h2>
+    <p class="artists-subtitle">Explore Your New Favourite Artists</p>
+
+    <ul class="artists-list" id="artistsList"></ul>
+
+    <button class="load-more is-hidden" id="loadMoreBtn">Load More</button>
+
+    <div class="loader is-hidden" id="artistsLoader"></div>
+  </div>
 </section>
 
       <!--!!! about us !!!-->
