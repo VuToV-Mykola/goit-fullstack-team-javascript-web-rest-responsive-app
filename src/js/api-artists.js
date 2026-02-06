@@ -1,34 +1,87 @@
-import axios from 'axios';
-import {API_BASE, DEFAULT_PAGE, ARTISTS_PAGE_LIMIT} from './config.js';
+import axios from "axios";
 
-export async function fetchArtists(page = DEFAULT_PAGE, perPage = ARTISTS_PAGE_LIMIT) {
-  const response = await axios.get(`${API_BASE}/artists`, {
-    params: {
-      page,
-      limit: perPage,
-    },
-  });
+const API_URL = 'https://sound-wave.b.goit.study/api/artists';
+const PER_PAGE = 8;
 
-  return response.data;
+const list = document.getElementById('artistsList');
+const loadMoreBtn = document.getElementById('loadMoreBtn');
+const loader = document.getElementById('artistsLoader');
+
+let page = 1;
+
+async function fetchArtists() {
+    try {
+        showLoader();
+
+        const response = await fetch(
+            `${API_URL}?page=${page}&limit=${PER_PAGE}`
+        );
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch artists');
+        }
+
+        const data = await response.json();
+
+        renderArtists(data.artists);
+
+        if (data.artists.length < PER_PAGE) {
+            loadMoreBtn.classList.add('is-hidden');
+        } else {
+            loadMoreBtn.classList.remove('is-hidden');
+        }
+
+        page += 1;
+    } catch (error) {
+        console.error(error);
+    } finally {
+        hideLoader();
+    }
+    
 }
 
-export async function fetchArtistById(id) {
-  if (!id) throw new Error('Artist id is required');
 
-  const response = await axios.get(`${API_BASE}/artists/${id}`);
-  return response.data;
+
+export function renderArtists(artists) {
+  if (!Array.isArray(artists)) return;
+
+  const markup = artists
+    .map(({ _id, strArtist, strArtistThumb, genres, strBiographyEN}) => {
+        const genresMarkup = genres
+            .map(
+                genre => `<span class="artist-genre">${genre}</span>`
+            )
+            .join('');
+
+      
+      return `
+        <li class="artist-card" data-id="${_id}">
+
+          <div class="artist-thumb">
+          <img src="${strArtistThumb}" alt="${strArtist}" class="artist-img" />
+          </div>
+
+          <p class="artist-genres">${genresMarkup}</p>
+
+          <h3 class="artist-name">${strArtist}</h3>
+          <p class="artist-bio">${strBiographyEN}</p>
+          <button class="artist-more">Learn more</button>
+        </li>
+      `;
+    })
+    .join('');
+
+  artistsList.insertAdjacentHTML('beforeend', markup);
 }
 
-export async function fetchGenres() {
-  const response = await axios.get(`${API_BASE}/genres`);
-  return response.data;
+function showLoader() {
+    loader.classList.remove('is-hidden');
 }
 
-export async function fetchFeedbacks() {
-  try {
-    const response = await axios.get(`${API_BASE}/feedbacks`);
-    return response.data;
-  } catch (error) {
-    throw new Error('Failed to load feedbacks', {cause: error});
-  }
+function hideLoader() {
+    loader.classList.add('is-hidden');
 }
+
+loadMoreBtn.addEventListener('click', fetchArtists);
+
+fetchArtists();
