@@ -1,1 +1,21 @@
-/* Секція відгуків — наслідує .section. #fff, #764191. Адаптивність: 320 / 768 / 1440px */
+.feedback-div {
+    width: 100%;
+  padding: 80px 0;
+  text-align: center;
+  color: #fff;
+  max-width: 866px;
+  margin: auto;
+}
+.feedback-title {
+font-weight: 700;
+font-size: 32px;
+line-height: 1.4;
+letter-spacing: -0.01em;
+margin-bottom: 32px;
+}
+.taste {
+    white-space: nowrap;
+}
+.feedback-name {
+
+}
