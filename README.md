@@ -5,7 +5,7 @@
 [🇺🇦 Українська](README.md) | [🇬🇧 English](README.en.md) | [🇩🇪 Deutsch](README.de.md)
 
 <!-- AUTOGEN:STATS -->
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/) [![PostCSS](https://img.shields.io/badge/PostCSS-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white)](https://postcss.org/) [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/) [![Terminal](https://img.shields.io/badge/mac%20terminal-000000?style=for-the-badge&logo=apple&logoColor=white&labelColor=000000)](https://support.apple.com/guide/terminal/welcome/mac) [![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/) [![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/) 
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/) [![PostCSS](https://img.shields.io/badge/PostCSS-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white)](https://postcss.org/) [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/) [![Terminal](https://img.shields.io/badge/mac%20terminal-000000?style=for-the-badge&logo=apple&logoColor=white&labelColor=000000)](https://support.apple.com/guide/terminal/welcome/mac) [![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/) [![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/) 
 
 [![📊 Views](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/visitors-badge.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/traffic)
 [![⭐ Stars](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/likes-badge.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/actions/workflows/screenshot-and-visitor.yaml)
@@ -81,19 +81,22 @@
 ```
 goit-fullstack-team-javascript-web-rest-responsive-app/
 ├── .github/
+│   ├── FUNDING.yml
 │   └── workflows/
 │       ├── deploy.yml
 │       └── screenshot-and-visitor.yaml
 ├── assets/
-│   └── db/
-│       ├── likes-badge.json
-│       ├── manual-likes.json
-│       ├── repo-license.json
-│       ├── repo-size.json
-│       ├── stargazers.json
-│       ├── stats-data.json
-│       ├── unique-users.json
-│       └── visitors-badge.json
+│   ├── db/
+│   │   ├── likes-badge.json
+│   │   ├── manual-likes.json
+│   │   ├── repo-license.json
+│   │   ├── repo-size.json
+│   │   ├── stargazers.json
+│   │   ├── stats-data.json
+│   │   ├── tech-badges.txt
+│   │   ├── unique-users.json
+│   │   └── visitors-badge.json
+│   └── screenshot.png
 ├── src/
 │   ├── css/
 │   │   ├── styles.css      # головний файл, підключає всі partials
@@ -108,9 +111,19 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 │   │   ├── artist-modal.css
 │   │   └── footer.css
 │   ├── img/
-│   │   └── icons.svg
+│   │   ├── about-us/
+│   │   ├── feedback/
+│   │   └── hero/
 │   ├── js/
-│   │   └── modal.js
+│   │   ├── api-artists.js
+│   │   ├── artist-modal.js
+│   │   ├── config.js
+│   │   ├── feedback-modal.js
+│   │   ├── feedback.js
+│   │   ├── header-mob-menu.js
+│   │   ├── hero.js
+│   │   ├── modal.js
+│   │   └── refs.js
 │   ├── partials/
 │   │   ├── header.html
 │   │   ├── hero.html
@@ -120,7 +133,10 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 │   │   ├── artist-modal.html
 │   │   └── footer.html
 │   ├── public/
-│   │   └── favicon.svg
+│   │   ├── favicon.svg
+│   │   ├── logo.svg
+│   │   └── img/
+│   │       └── sprite.svg
 │   ├── index.html
 │   └── main.js
 ├── .gitignore
@@ -146,6 +162,42 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 | Feedback | `feedback.html` | `feedback.css` |
 | Artist Details Modal | `artist-modal.html` | `artist-modal.css` |
 | Footer | `footer.html` | `footer.css` |
+
+---
+
+## 👥 Учасники
+
+1. **Team lead Vutov Mykola**
+   - [x] GitHubName: VuToV-Mykola — GitHubNick: VuToV-Mykola  
+   - GitHub: [репозиторій](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app) · [GitHub Pages](https://vutov-mykola.github.io/goit-fullstack-team-javascript-web-rest-responsive-app/)
+
+2. **Scrum master Vladimir Kostik**
+   - [x] GitHubName: VladimirKostik — GitHubNick: VladimirKostik  
+   - [Дошка Trello](https://trello.com/invite/b/6983854b2b91b6cce8c6cb1f/ATTI7a3fbac5afba7f60b5aabaddf40a90860123F1DD/project-javascript)
+
+3. **Backend master Elina Warzer**
+   - [x] GitHubName: Elina Reznichenko — GitHubNick: EllieReznichenko
+
+4. **Developer Олександр Чернишов**
+   - [x] GitHubName: Oleksandr Chernyshov — GitHubNick: AlPetrChernyshov
+
+5. **Developer Маріам**
+   - [x] GitHubName: Mariam — GitHubNick: MariamPadalka
+
+6. **Developer Oleksandr Sheveria**
+   - [x] GitHubName: OleksandrShevk — GitHubNick: Shevk1n
+
+7. **Developer Tetiana Zinovieva**
+   - [x] GitHubName: Tetiana Zinovieva — GitHubNick: TaliaZcoder
+
+8. **Developer Светлана Токаренко**
+   - [x] GitHubName: _______ — GitHubNick: _______
+
+9. **Developer Lidia 01**
+   - [x] GitHubName: _______ — GitHubNick: _______
+
+10. **Developer Олег Левченко**
+    - [x] GitHubName: _______ — GitHubNick: _______
 
 ---
 

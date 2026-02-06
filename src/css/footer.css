@@ -1,19 +1,16 @@
-/* Footer: підвал — навігація, соцмережі, копірайт */
-
-/* Секція: відступи, перевизначення .section */
+/* Mobile 320px */
 .footer.section {
   padding-top: 48px;
   padding-bottom: 48px;
+  box-sizing: border-box;
 }
 
-/* Обгортка: лого + навігація, роздільник знизу */
 .footer-wrapper {
   padding-bottom: 48px;
   text-align: center;
   border-bottom: 1px solid rgb(255 255 255 / 20%);
 }
 
-/* Блок: соцмережі + копірайт */
 .footer-bottom {
   margin-top: 24px;
   display: flex;
@@ -21,7 +18,6 @@
   gap: 24px;
 }
 
-/* Навігація: лого та посилання */
 .footer-nav {
   display: flex;
   flex-direction: column;
@@ -30,7 +26,6 @@
   align-items: center;
 }
 
-/* Логотип (посилання на головну) */
 .footer-nav-logo {
   display: inline-block;
   width: 116px;
@@ -55,7 +50,7 @@
   justify-content: center;
 }
 
-/* Посилання навігації (reset: a; base: колір від .section) */
+/* Посилання навігації */
 .footer-nav-link {
   font-weight: 600;
   font-size: 16px;
@@ -101,13 +96,13 @@
   overflow: hidden;
 }
 
-/* Копірайт (reset: p margin 0; base: font, колір від body/.section) */
+/* Копірайт */
 .footer-copyrights {
   font-size: 16px;
   text-align: center;
 }
 
-/* Tablet */
+/* Tablet 768px */
 @media only screen and (width >= 768px) {
   .footer.section {
     padding-top: 80px;
@@ -125,6 +120,7 @@
   }
 
   .footer-nav-logo {
+    width: 116px;
     height: 45px;
   }
 
@@ -142,7 +138,7 @@
   }
 }
 
-/* Desktop */
+/* Desktop 1440px */
 @media only screen and (width >= 1440px) {
   .footer-social-svg {
     width: 24px;

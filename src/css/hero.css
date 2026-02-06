@@ -1,6 +1,4 @@
-/* Hero: секція — заголовок, опис, кнопка Explore Artists, фонове зображення */
-
-/* Секція та оверлеї градієнтів */
+/* Mobile 320px */
 .hero {
   position: relative;
   background-color: #23132b;
@@ -15,7 +13,7 @@
   left: 0;
   right: 0;
   height: 80px;
-  background: linear-gradient(180deg, #060307, rgb(35 19 43 / 0%));
+  background: linear-gradient(180deg, rgb(6 3 7 / 100%), rgb(35 19 43 / 0%));
   pointer-events: none;
   z-index: 10;
 }
@@ -27,94 +25,94 @@
   left: 0;
   right: 0;
   height: 106px;
-  background: linear-gradient(0deg, #060307, rgb(35 19 43 / 0%));
+  background: linear-gradient(0deg, rgb(6 3 7 / 100%), rgb(35 19 43 / 0%));
   pointer-events: none;
   z-index: 10;
 }
 
-/* Контейнер секції (відступи) */
 .hero .container {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
-/* Блок: заголовок + опис + кнопка */
 .hero-wrapper {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 288px;
+  max-width: 100%;
+  height: auto;
   margin-bottom: 64px;
 }
 
-/* Заголовок H1 (reset: margin 0) */
 .hero-title {
   font-family: Epilogue, sans-serif;
+  margin-bottom: 20px;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 44px;
   line-height: 1.1;
   letter-spacing: -0.01em;
-  margin-bottom: 20px;
 }
 
-/* Підзаголовок H2 (reset: margin 0; base: колір від .section) */
 .hero-description {
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 24px;
 }
 
-
-/* Кнопка навігації на секцію #artists */
 .explore-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   gap: 12px;
-  min-height: 47px;
-  padding: 10px 24px;
-  width: 100%;
   border: none;
   border-radius: 12px;
+  padding: 0;
+  width: 288px;
+  max-width: 100%;
+  height: 47px;
+  box-sizing: border-box;
+  box-shadow:
+    0 1px 2px 0 rgb(6 3 7 / 5%),
+    inset 0 -2px 1px 0 rgb(0 0 0 / 20%),
+    inset 0 0 0 1px rgb(6 3 7 / 15%),
+    inset 0 2px 1px 0 rgb(255 255 255 / 25%),
+    inset 0 32px 24px 0 rgb(255 255 255 / 5%);
   background: #764191;
+  color: #fff;
+  text-align: center;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
-  text-align: center;
-  box-shadow:
-    0 1px 2px 0 color-mix(in srgb, #060307 5%, transparent),
-    inset 0 -2px 1px 0 rgb(0 0 0 / 20%),
-    inset 0 0 0 1px color-mix(in srgb, #060307 15%, transparent),
-    inset 0 2px 1px 0 rgb(255 255 255 / 25%),
-    inset 0 32px 24px 0 rgb(255 255 255 / 5%);
   transition: background 0.2s ease-in-out;
 }
 
 .explore-btn:hover,
 .explore-btn:focus {
-  background: color-mix(in srgb, #764191 60%, transparent);
+  background: rgb(118 65 145 / 60%);
 }
 
-/* Блок фонового зображення */
 .bg-image {
-  width: 280px;
-  height: 385px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #23132b;
+  width: 288px;
+  height: 385px;
+  margin: auto;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-image: url("/img/hero/bg-image-mobile.webp");
 }
 
-@media (resolution >= 192dpi) {
+@media (width <= 767px) and (resolution >= 192dpi) {
   .bg-image {
     background-image: url("/img/hero/bg-image-mobile@2x.webp");
   }
 }
 
-/* Tablet */
+/* Tablet 768px */
 @media only screen and (width >= 768px) {
   .hero::after {
     height: 137px;
@@ -124,9 +122,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 0 32px;
+    box-sizing: border-box;
   }
 
   .hero-wrapper {
+    width: 704px;
     align-self: center;
     margin-bottom: 32px;
   }
@@ -145,23 +147,30 @@
 
   .explore-btn {
     width: 246px;
+    height: 47px;
     align-self: flex-start;
+    padding: 0;
+    margin: 0;
+    max-width: none;
   }
 
   .bg-image {
     width: 704px;
     height: 632px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     background-image: url("/img/hero/bg-image-tablet.webp");
   }
 }
 
-@media only screen and (width >= 768px) and (resolution >= 192dpi) {
+@media only screen and (width >= 768px) and (width <= 1439px) and (resolution >= 192dpi) {
   .bg-image {
     background-image: url("/img/hero/bg-image-tablet@2x.webp");
   }
 }
 
-/* Desktop */
+/* Desktop 1440px */
 @media only screen and (width >= 1440px) {
   .hero {
     padding: 0;
@@ -169,12 +178,15 @@
 
   .hero .container {
     flex-direction: row;
+    padding: 0 64px;
+    box-sizing: border-box;
   }
 
   .hero-wrapper {
     justify-content: center;
+    flex-direction: column;
+    margin: 0;
     width: 672px;
-    margin-bottom: 0;
   }
 
   .hero-title {
@@ -183,11 +195,13 @@
 
   .explore-btn {
     width: 206px;
+    margin: 0;
+    max-width: none;
   }
 
   .bg-image {
-    width: 641px;
     height: 960px;
+    width: 641px;
     margin: 0;
     background-image: url("/img/hero/bg-image-desktop.webp");
   }
