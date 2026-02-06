@@ -80,23 +80,6 @@ Sections and files are aligned with the [ArtistsHub (Figma)](https://www.figma.c
 
 ```
 goit-fullstack-team-javascript-web-rest-responsive-app/
-├── .github/
-│   ├── FUNDING.yml
-│   └── workflows/
-│       ├── deploy.yml
-│       └── screenshot-and-visitor.yaml
-├── assets/
-│   ├── db/
-│   │   ├── likes-badge.json
-│   │   ├── manual-likes.json
-│   │   ├── repo-license.json
-│   │   ├── repo-size.json
-│   │   ├── stargazers.json
-│   │   ├── stats-data.json
-│   │   ├── tech-badges.txt
-│   │   ├── unique-users.json
-│   │   └── visitors-badge.json
-│   └── screenshot.png
 ├── src/
 │   ├── css/
 │   │   ├── styles.css      # main entry, imports all partials
@@ -117,13 +100,12 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 │   ├── js/
 │   │   ├── api-artists.js
 │   │   ├── artist-modal.js
+│   │   ├── artists.js
 │   │   ├── config.js
 │   │   ├── feedback-modal.js
 │   │   ├── feedback.js
 │   │   ├── header-mob-menu.js
-│   │   ├── hero.js
-│   │   ├── modal.js
-│   │   └── refs.js
+│   │   └── hero.js
 │   ├── partials/
 │   │   ├── header.html
 │   │   ├── hero.html
