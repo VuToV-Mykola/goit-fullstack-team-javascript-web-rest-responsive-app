@@ -35,7 +35,7 @@ import{a as d,S as w,N as E,P as L,R as S}from"./assets/vendor-BstjoptQ.js";(fun
     <ul class="info-genres">
       ${k.map(y=>`<li class="info-genres-item">${y}</li>`).join("")}
     </ul>
-  `}async function T(e){try{const t=await Q(e);console.log(t),A.innerHTML=M(t)}catch(t){console.log(t),A.innerHTML=`
+  `}async function T(e){try{const t=await Q(e);A.innerHTML=M(t)}catch(t){console.log(t),A.innerHTML=`
       <p class="error">Failed to load artist information</p>
     `}}document.getElementById("artistsList");const l=document.getElementById("loadMoreBtn"),v=document.getElementById("artistsLoader");let p=1;const g=8;async function h(){try{C();const e=await F(p,g),t=e.artists||e;U(t),t.length<g?l.classList.add("is-hidden"):l.classList.remove("is-hidden"),p+=1}catch(e){console.error("Failed to load artists:",e)}finally{H()}}function U(e){if(!Array.isArray(e))return;const t=e.map(({_id:s,strArtist:n,strArtistThumb:a,genres:r,strBiographyEN:i})=>{const o=r.map(c=>`<span class="artist-genre">${c}</span>`).join("");return`
         <li class="artist-card" data-id="${s}">
