@@ -9,11 +9,15 @@
 
 [![📊 Views](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/visitors-badge.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/traffic)
 [![⭐ Stars](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/likes-badge.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/actions/workflows/screenshot-and-visitor.yaml)
+[![👥 Contributors](https://img.shields.io/github/contributors/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/contributors)
 [![📦 Size](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/repo-size.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app)
 [![📄 License](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/repo-license.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/blob/main/LICENSE)
 
 ## 📸 Project screenshot
 ![Project Screenshot](./assets/screenshot.png)
+
+## 👥 Contributors
+[![Contributors](https://contrib.rocks/image?repo=VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/contributors)
 <!-- END:AUTOGEN -->
 
 ---
@@ -36,10 +40,11 @@
 | Category | Stack |
 |----------|-------|
 | Markup | HTML5, semantic tags |
-| Styles | CSS3, modern-normalize, mobile-first, [Stylelint](https://stylelint.io/user-guide/rules) |
-| Scripts | JavaScript (ES modules) |
+| Styles | CSS3, [modern-normalize](https://cdnjs.com/libraries/modern-normalize), mobile-first, [Stylelint](https://stylelint.io/user-guide/rules) |
+| Scripts | JavaScript (ES modules), [Axios](https://axios-http.com/), [Swiper](https://swiperjs.com/), [Raty.js](https://www.npmjs.com/package/raty-js), css-star-rating |
 | Build | Vite, PostCSS (sort media queries), vite-plugin-html-inject, vite-plugin-full-reload |
-| Other | [Code Guide](https://codeguide.co/), W3C / JSHint validators |
+| Icons & images | [IcoMoon](https://icomoon.io/) (sprite.svg), [SVGOMG](https://jakearchibald.github.io/svgomg/) (SVG minification), [Squoosh](https://squoosh.app/) (WebP) |
+| Other | [Code Guide](https://codeguide.co/), [W3C](https://validator.w3.org/) / [JSHint](https://jshint.com/) validators |
 
 ---
 
@@ -80,26 +85,9 @@ Sections and files are aligned with the [ArtistsHub (Figma)](https://www.figma.c
 
 ```
 goit-fullstack-team-javascript-web-rest-responsive-app/
-├── .github/
-│   ├── FUNDING.yml
-│   └── workflows/
-│       ├── deploy.yml
-│       └── screenshot-and-visitor.yaml
-├── assets/
-│   ├── db/
-│   │   ├── likes-badge.json
-│   │   ├── manual-likes.json
-│   │   ├── repo-license.json
-│   │   ├── repo-size.json
-│   │   ├── stargazers.json
-│   │   ├── stats-data.json
-│   │   ├── tech-badges.txt
-│   │   ├── unique-users.json
-│   │   └── visitors-badge.json
-│   └── screenshot.png
 ├── src/
 │   ├── css/
-│   │   ├── styles.css      # main entry, imports all partials
+│   │   ├── styles.css     
 │   │   ├── reset.css
 │   │   ├── base.css
 │   │   ├── container.css
@@ -117,13 +105,12 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 │   ├── js/
 │   │   ├── api-artists.js
 │   │   ├── artist-modal.js
+│   │   ├── artists.js
 │   │   ├── config.js
 │   │   ├── feedback-modal.js
 │   │   ├── feedback.js
 │   │   ├── header-mob-menu.js
-│   │   ├── hero.js
-│   │   ├── modal.js
-│   │   └── refs.js
+│   │   └── hero.js
 │   ├── partials/
 │   │   ├── header.html
 │   │   ├── hero.html
@@ -191,13 +178,7 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
    - [x] GitHubName: Tetiana Zinovieva — GitHubNick: TaliaZcoder
 
 8. **Developer Svetlana Tokarenko**
-   - [x] GitHubName: _______ — GitHubNick: _______
-
-9. **Developer Lidia 01**
-   - [x] GitHubName: _______ — GitHubNick: _______
-
-10. **Developer Oleh Levchenko**
-    - [x] GitHubName: _______ — GitHubNick: _______
+   - [x] GitHubName: Svetlana — GitHubNick: Svetlana-see
 
 ---
 

@@ -1,10 +1,11 @@
 {
-  "total_unique_users": 1,
-  "unique_visitors": 11,
+  "total_unique_users": 2,
+  "unique_visitors": 480,
   "stargazers": {
-    "count": 1,
+    "count": 2,
     "users": [
-  "TaliaZcoder"
+  "TaliaZcoder",
+  "VuToV-Mykola"
 ]
   },
   "manual_likes": {
@@ -12,7 +13,8 @@
     "users": []
   },
   "all_engaged_users": [
-  "TaliaZcoder"
+  "TaliaZcoder",
+  "VuToV-Mykola"
 ],
-  "updated_at": "2026-02-06 16:49:51"
+  "updated_at": "2026-02-07 06:30:47"
 }
