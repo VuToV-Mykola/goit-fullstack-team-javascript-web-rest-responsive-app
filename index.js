@@ -11,5 +11,5 @@
           <p class="artist-bio">${n}</p>
           <button class="artist-more">Learn more</button>
         </li>
-      `}).join("");L.insertAdjacentHTML("beforeend",r)}function v(){l.classList.remove("is-hidden")}function A(){l.classList.add("is-hidden")}c.addEventListener("click",u);u();
+      `}).join("");L.insertAdjacentHTML("beforeend",r)}function v(){l.classList.remove("is-hidden")}function A(){l.classList.add("is-hidden")}c.addEventListener("click",u);u();document.querySelector(".modal-content");
 //# sourceMappingURL=index.js.map
