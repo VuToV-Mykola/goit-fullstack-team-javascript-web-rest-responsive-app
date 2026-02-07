@@ -9,11 +9,15 @@
 
 [![📊 Views](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/visitors-badge.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/traffic)
 [![⭐ Stars](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/likes-badge.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/actions/workflows/screenshot-and-visitor.yaml)
+[![👥 Contributors](https://img.shields.io/github/contributors/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/contributors)
 [![📦 Size](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/repo-size.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app)
 [![📄 License](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/repo-license.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/blob/main/LICENSE)
 
 ## 📸 Скріншот проекту
 ![Project Screenshot](./assets/screenshot.png)
+
+## 👥 Контриб'ютори
+[![Contributors](https://contrib.rocks/image?repo=VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/contributors)
 <!-- END:AUTOGEN -->
 
 ---
@@ -82,7 +86,7 @@
 goit-fullstack-team-javascript-web-rest-responsive-app/
 ├── src/
 │   ├── css/
-│   │   ├── styles.css      # головний файл, підключає всі partials
+│   │   ├── styles.css     
 │   │   ├── reset.css
 │   │   ├── base.css
 │   │   ├── container.css
@@ -173,13 +177,7 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
    - [x] GitHubName: Tetiana Zinovieva — GitHubNick: TaliaZcoder
 
 8. **Developer Светлана Токаренко**
-   - [x] GitHubName: _______ — GitHubNick: _______
-
-9. **Developer Lidia 01**
-   - [x] GitHubName: _______ — GitHubNick: _______
-
-10. **Developer Олег Левченко**
-    - [x] GitHubName: _______ — GitHubNick: _______
+   - [x] GitHubName: Svetlana — GitHubNick: Svetlana-see
 
 ---
 
