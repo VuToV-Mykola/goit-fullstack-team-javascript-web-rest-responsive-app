@@ -1,5 +1,5 @@
-import { fetchArtists } from './api-artists';
-import { openArtistModal } from './artist-modal';
+import {fetchArtists} from './api-artists';
+import {openArtistModal} from './artist-modal';
 
 const list = document.getElementById('artistsList');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
@@ -39,7 +39,7 @@ function renderArtists(artists) {
   if (!Array.isArray(artists)) return;
 
   const markup = artists
-    .map(({ _id, strArtist, strArtistThumb, genres, strBiographyEN }) => {
+    .map(({_id, strArtist, strArtistThumb, genres, strBiographyEN}) => {
       const genresMarkup = genres
         .map(genre => `<span class="artist-genre">${genre}</span>`)
         .join('');
@@ -67,20 +67,18 @@ function renderArtists(artists) {
 // LOADER
 
 function showLoader() {
-    loader.classList.remove('is-hidden');
+  loader.classList.remove('is-hidden');
 }
 
 function hideLoader() {
-    loader.classList.add('is-hidden');
+  loader.classList.add('is-hidden');
 }
 
 // INIT
 
 loadArtists();
 
-
 // EVENT
-
 
 loadMoreBtn.addEventListener('click', loadArtists);
 
@@ -93,4 +91,3 @@ artistsList.addEventListener('click', event => {
 
   openArtistModal(card.dataset.id);
 });
-

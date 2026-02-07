@@ -339,10 +339,10 @@ jobs:
             exit 0
           fi
 
-          SCREENSHOT_EXISTS=false
           if [ -f "$SCREENSHOT_DIR/screenshot.png" ]; then
-            FILE_SIZE=$(stat -f%z "$SCREENSHOT_DIR/screenshot.png" 2>/dev/null || stat -c%s "$SCREENSHOT_DIR/screenshot.png" 2>/dev/null || echo 0)
-            if [ "$FILE_SIZE" -gt 1000 ]; then
+            FILE_SIZE=$(wc -c < "$SCREENSHOT_DIR/screenshot.png" 2>/dev/null || echo "0")
+            [ -z "$FILE_SIZE" ] && FILE_SIZE=0
+            if [ "$FILE_SIZE" -gt 1000 ] 2>/dev/null; then
               echo "📷 Screenshot already exists ($FILE_SIZE bytes) - skipping overwrite"
               echo "SCREENSHOT_CREATED=true" >> $GITHUB_ENV
               if [ -f "$SCREENSHOT_DIR/screenshot.hash" ]; then
@@ -525,7 +525,7 @@ jobs:
           fi
 
           if [ -f "$SCREENSHOT_DIR/screenshot.png" ]; then
-            FILE_SIZE=$(stat -f%z "$SCREENSHOT_DIR/screenshot.png" 2>/dev/null || stat -c%s "$SCREENSHOT_DIR/screenshot.png" 2>/dev/null || echo 0)
+            FILE_SIZE=$(wc -c < "$SCREENSHOT_DIR/screenshot.png" 2>/dev/null || echo 0)
             if [ "$FILE_SIZE" -lt 1000 ]; then
               echo "⚠️ Screenshot file exists but is too small ($FILE_SIZE bytes), removing..."
               rm -f "$SCREENSHOT_DIR/screenshot.png"
@@ -574,7 +574,7 @@ jobs:
             fi
             
             if [ "$SCREENSHOT_CREATED" = "true" ] && [ -f "$SCREENSHOT_DIR/screenshot.png" ]; then
-              SCREENSHOT_SIZE=$(stat -f%z "$SCREENSHOT_DIR/screenshot.png" 2>/dev/null || stat -c%s "$SCREENSHOT_DIR/screenshot.png" 2>/dev/null || echo "0")
+              SCREENSHOT_SIZE=$(wc -c < "$SCREENSHOT_DIR/screenshot.png" 2>/dev/null || echo "0")
               if [ "$SCREENSHOT_SIZE" -gt 0 ]; then
                 SCREENSHOT_HASH_VALUE="$SCREENSHOT_HASH"
                 if [ -z "$SCREENSHOT_HASH_VALUE" ] && [ -f "$SCREENSHOT_DIR/screenshot.hash" ]; then
@@ -591,7 +591,7 @@ jobs:
             fi
             echo ""
             echo "## 👥 Контриб'ютори"
-            echo "[![Contributors](https://contrib.rocks/image?repo=${{ github.repository }})](https://github.com/${{ github.repository }}/graphs/contributors)"
+            echo "[![Contributors](https://img.shields.io/github/contributors/${{ github.repository }}?logo=github)](https://github.com/${{ github.repository }}/graphs/contributors)"
             
             echo "<!-- END:AUTOGEN -->"
             cat README_after.tmp

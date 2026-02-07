@@ -1,5 +1,23 @@
 import {fetchArtistById} from './api-artists.js';
 
+const API_URL = 'https://sound-wave.b.goit.study/api';
+
+async function fetchArtistByIdModal(id) {
+  if (!id) throw new Error('Artist ID is required');
+
+  try {
+    const response = await fetch(`${API_URL}/artists/${id}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const artist = await response.json();
+    return artist;
+  } catch (error) {
+    console.error('Error fetching artist:', error);
+    return null;
+  }
+}
+
 const modalContent = document.querySelector('.modal-content');
 
 function createArtistMarkup(artist) {
@@ -68,5 +86,6 @@ export async function openArtistModal(artistId) {
     `;
   }
 }
+
 // тимчасово для перевірки
 // openArtistModal('65ada5b8af9f6d155db4806b');
