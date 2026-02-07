@@ -1,7 +1,5 @@
 import {fetchArtistById} from './api-artists';
-import {fetchArtistAlbums} from './api-artists';
 
-const albums = await fetchArtistAlbums(artistId);
 const modalContent = document.querySelector('.modal-content');
 const closeModalBtn = document.querySelector('.modal-close-btn');
 const backdrop = document.querySelector('.backdrop');
