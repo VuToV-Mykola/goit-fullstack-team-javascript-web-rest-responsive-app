@@ -1,5 +1,5 @@
 import {fetchArtists} from './api-artists';
-import {openArtistModal} from './artist-modal';
+// import {openArtistModal} from './artist-modal';
 
 const list = document.getElementById('artistsList');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
