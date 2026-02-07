@@ -58,8 +58,6 @@ function createArtistMarkup(artist) {
 export async function openArtistModal(artistId) {
   try {
     const artist = await fetchArtistById(artistId);
-    console.log(artist);
-
     modalContent.innerHTML = createArtistMarkup(artist);
   } catch (error) {
     console.log(error);
