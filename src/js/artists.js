@@ -81,13 +81,3 @@ loadArtists();
 // EVENT
 
 loadMoreBtn.addEventListener('click', loadArtists);
-
-artistsList.addEventListener('click', event => {
-  const btn = event.target.closest('.artist-more');
-  if (!btn) return;
-
-  const card = btn.closest('.artist-card');
-  if (!card) return;
-
-  openArtistModal(card.dataset.id);
-});
