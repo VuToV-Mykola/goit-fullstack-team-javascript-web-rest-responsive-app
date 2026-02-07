@@ -40,10 +40,11 @@
 | Kategorie | Stack |
 |-----------|-------|
 | Markup | HTML5, semantische Tags |
-| Styles | CSS3, modern-normalize, Mobile-First, [Stylelint](https://stylelint.io/user-guide/rules) |
-| Skripte | JavaScript (ES-Module) |
+| Styles | CSS3, [modern-normalize](https://cdnjs.com/libraries/modern-normalize), Mobile-First, [Stylelint](https://stylelint.io/user-guide/rules) |
+| Skripte | JavaScript (ES-Module), [Axios](https://axios-http.com/), [Swiper](https://swiperjs.com/), [Raty.js](https://www.npmjs.com/package/raty-js), css-star-rating |
 | Build | Vite, PostCSS (Sort Media Queries), vite-plugin-html-inject, vite-plugin-full-reload |
-| Sonstiges | [Code Guide](https://codeguide.co/), W3C-/JSHint-Validatoren |
+| Icons & Bilder | [IcoMoon](https://icomoon.io/) (sprite.svg), [SVGOMG](https://jakearchibald.github.io/svgomg/) (SVG-Minifizierung), [Squoosh](https://squoosh.app/) (WebP) |
+| Sonstiges | [Code Guide](https://codeguide.co/), [W3C](https://validator.w3.org/)-/[JSHint](https://jshint.com/)-Validatoren |
 
 ---
 
