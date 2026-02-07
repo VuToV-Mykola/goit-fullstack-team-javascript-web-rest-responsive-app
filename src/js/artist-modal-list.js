@@ -1,90 +1,91 @@
-import {openArtistModal} from './artist-modal.js';
+import {fetchArtistById} from './api-artists.js';
 
-const API_URL = 'https://sound-wave.b.goit.study/api/artists';
-const PER_PAGE = 8;
+const API_URL = 'https://sound-wave.b.goit.study/api';
 
-const list = document.getElementById('artistsList');
-const loadMoreBtn = document.getElementById('loadMoreBtn');
-const loader = document.getElementById('artistsLoader');
+async function fetchArtistByIdModal(id) {
+  if (!id) throw new Error('Artist ID is required');
 
-let page = 1;
-
-async function fetchArtists() {
   try {
-    showLoader();
-
-    const response = await fetch(`${API_URL}?page=${page}&limit=${PER_PAGE}`);
-
+    const response = await fetch(`${API_URL}/artists/${id}`);
     if (!response.ok) {
-      throw new Error('Failed to fetch artists');
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
-
-    const data = await response.json();
-
-    renderArtists(data.artists);
-
-    if (data.artists.length < PER_PAGE) {
-      loadMoreBtn.classList.add('is-hidden');
-    } else {
-      loadMoreBtn.classList.remove('is-hidden');
-    }
-
-    page += 1;
+    const artist = await response.json();
+    return artist;
   } catch (error) {
-    console.error(error);
-  } finally {
-    hideLoader();
+    console.error('Error fetching artist:', error);
+    return null;
   }
 }
 
-export function renderArtists(artists) {
-  if (!Array.isArray(artists)) return;
+const modalContent = document.querySelector('.modal-content');
 
-  const markup = artists
-    .map(({_id, strArtist, strArtistThumb, genres, strBiographyEN}) => {
-      const genresMarkup = genres
-        .map(genre => `<span class="artist-genre">${genre}</span>`)
-        .join('');
+function createArtistMarkup(artist) {
+  const {
+    strArtist: artistName,
+    strArtistThumb: artistImage,
+    intFormedYear: formedYear,
+    intDiedYear: endedYear,
+    strGender: gender,
+    intMembers: membersCount,
+    strCountry: country,
+    strBiographyEN: biography,
+    genres,
+  } = artist;
 
-      return `
-        <li class="artist-card" data-id="${_id}">
+  return `
+    <h2 class="artist-name">${artistName}</h2>
 
-          <div class="artist-thumb">
-          <img src="${strArtistThumb}" alt="${strArtist}" class="artist-img" />
-          </div>
+  <div class="artist-image">
+    <img src="${artistImage}" alt="${artistName || 'Artist'}" />
+  </div>
 
-          <p class="artist-genres">${genresMarkup}</p>
+  <div class="artist-info">
+    <div class="info-row">
+      <span class="label">Years active</span>
+      <span class="value">${formedYear}-${endedYear === null ? 'present' : endedYear}</span>
+    </div>
 
-          <h3 class="artist-name">${strArtist}</h3>
-          <p class="artist-bio">${strBiographyEN}</p>
-          <button class="artist-more">Learn more</button>
-        </li>
-      `;
-    })
-    .join('');
+    <div class="info-row">
+      <span class="label">Sex</span>
+      <span class="value">${gender}</span>
+    </div>
 
-  artistsList.insertAdjacentHTML('beforeend', markup);
+    <div class="info-row">
+      <span class="label">Members</span>
+      <span class="value">${membersCount}</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Country</span>
+      <span class="value">${country}</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Biography</span>
+      <span class="value">${biography}</span>
+    </div>
+  </div>
+
+    <ul class="info-genres">
+      ${genres.map(genre => `<li class="info-genres-item">${genre}</li>`).join('')}
+    </ul>
+  `;
 }
 
-function showLoader() {
-  loader.classList.remove('is-hidden');
-}
+export async function openArtistModal(artistId) {
+  try {
+    const artist = await fetchArtistById(artistId);
+    console.log(artist);
 
-function hideLoader() {
-  loader.classList.add('is-hidden');
-}
-
-loadMoreBtn.addEventListener('click', fetchArtists);
-
-fetchArtists();
-
-artistsList.addEventListener('click', async e => {
-  console.log('Clicked!!!');
-  if (e.target.classList.contains('artist-more')) {
-    const artistCard = e.target.closest('.artist-card');
-    if (!artistCard) return;
-
-    const artistId = artistCard.dataset.id;
-    await openArtistModal(artistId);
+    modalContent.innerHTML = createArtistMarkup(artist);
+  } catch (error) {
+    console.log(error);
+    modalContent.innerHTML = `
+      <p class="error">Failed to load artist information</p>
+    `;
   }
-});
+}
+
+// тимчасово для перевірки
+// openArtistModal('65ada5b8af9f6d155db4806b');

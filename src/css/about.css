@@ -2,30 +2,45 @@
 .about-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+
+  /* правка */
+  align-items: center;
+
+  /* правка */
   gap: 48px;
   box-sizing: border-box;
 }
 
+/* правка */
 .about-image {
-  width: 288px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 288px;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 
+/* правка */
+
+/* правка */
 .about-img {
-  border-radius: 16px;
-  width: 288px;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
+/* правка */
 .about-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  max-width: 288px;
+
+  /* правка */
+  width: 100%;
+
+  /* правка */
 }
 
 .about-icon {
@@ -53,14 +68,19 @@
   }
 
   .about-image {
-    width: 704px;
-    max-width: 100%;
+    max-width: 704px;
   }
 
+  /* правка */
+
+  /*
   .about-img {
     width: 704px;
     max-width: 100%;
   }
+    */
+
+  /* правка */
 
   .about-content {
     max-width: 704px;
@@ -82,19 +102,32 @@
   .about-wrapper {
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+
+    /* правка */
+    justify-content: center;
+
+    /* правка */
     gap: 32px;
   }
 
+  /* правка */
   .about-image {
-    width: 640px;
-    max-width: none;
+    max-width: 640px;
+    aspect-ratio: 640 / 665;
   }
 
+  /* правка */
+
+  /* правка */
+
+  /*
   .about-img {
     width: 640px;
     max-width: none;
   }
+  */
+
+  /* правка */
 
   .about-title {
     font-size: 60px;
