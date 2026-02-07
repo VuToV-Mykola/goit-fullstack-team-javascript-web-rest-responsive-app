@@ -1,78 +1,70 @@
-import axios from "axios";
-import { API_BASE, DEFAULT_PAGE, ARTISTS_PAGE_LIMIT } from "./config.js";
-
-const API_URL = `${API_BASE}/artists`;
+import { fetchArtists } from './api-artists';
+import { openArtistModal } from './artist-modal';
 
 const list = document.getElementById('artistsList');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 const loader = document.getElementById('artistsLoader');
 
-let page = DEFAULT_PAGE;
+let page = 1;
+const PER_PAGE = 8;
 
-async function fetchArtists() {
-    try {
-        showLoader();
+// LOAD ARTISTS
 
-        const response = await fetch(
-            `${API_URL}?page=${page}&limit=${ARTISTS_PAGE_LIMIT}`
-        );
+async function loadArtists() {
+  try {
+    showLoader();
 
-        if (!response.ok) {
-            throw new Error('Failed to fetch artists');
-        }
+    const data = await fetchArtists(page, PER_PAGE);
+    const artists = data.artists || data;
 
-        const data = await response.json();
+    renderArtists(artists);
 
-        renderArtists(data.artists);
-
-        if (data.artists.length < ARTISTS_PAGE_LIMIT) {
-            loadMoreBtn.classList.add('is-hidden');
-        } else {
-            loadMoreBtn.classList.remove('is-hidden');
-        }
-
-        page += 1;
-    } catch (error) {
-        console.error(error);
-    } finally {
-        hideLoader();
+    if (artists.length < PER_PAGE) {
+      loadMoreBtn.classList.add('is-hidden');
+    } else {
+      loadMoreBtn.classList.remove('is-hidden');
     }
-    
+
+    page += 1;
+  } catch (error) {
+    console.error('Failed to load artists:', error);
+  } finally {
+    hideLoader();
+  }
 }
 
+// RENDER
 
-
-export function renderArtists(artists) {
+function renderArtists(artists) {
   if (!Array.isArray(artists)) return;
 
   const markup = artists
-    .map(({ _id, strArtist, strArtistThumb, genres, strBiographyEN}) => {
-        const genresMarkup = genres
-            .map(
-                genre => `<span class="artist-genre">${genre}</span>`
-            )
-            .join('');
+    .map(({ _id, strArtist, strArtistThumb, genres, strBiographyEN }) => {
+      const genresMarkup = genres
+        .map(genre => `<span class="artist-genre">${genre}</span>`)
+        .join('');
 
-      
       return `
         <li class="artist-card" data-id="${_id}">
-
           <div class="artist-thumb">
-          <img src="${strArtistThumb}" alt="${strArtist}" class="artist-img" />
+            <img src="${strArtistThumb}" alt="${strArtist}" class="artist-img" />
           </div>
 
-          <p class="artist-genres">${genresMarkup}</p>
-
-          <h3 class="artist-name">${strArtist}</h3>
-          <p class="artist-bio">${strBiographyEN}</p>
-          <button class="artist-more">Learn more</button>
+          <div class="artist-content">
+            <div class="artist-genres">${genresMarkup}</div>
+            <h3 class="artist-name">${strArtist}</h3>
+            <p class="artist-bio">${strBiographyEN}</p>
+            <button class="artist-more" type="button">Learn more</button>
+          </div>
         </li>
       `;
     })
     .join('');
 
-  list.insertAdjacentHTML('beforeend', markup);
+  artistsList.insertAdjacentHTML('beforeend', markup);
 }
+
+// LOADER
 
 function showLoader() {
     loader.classList.remove('is-hidden');
@@ -82,6 +74,23 @@ function hideLoader() {
     loader.classList.add('is-hidden');
 }
 
-loadMoreBtn.addEventListener('click', fetchArtists);
+// INIT
 
-fetchArtists();
+loadArtists();
+
+
+// EVENT
+
+
+loadMoreBtn.addEventListener('click', loadArtists);
+
+artistsList.addEventListener('click', event => {
+  const btn = event.target.closest('.artist-more');
+  if (!btn) return;
+
+  const card = btn.closest('.artist-card');
+  if (!card) return;
+
+  openArtistModal(card.dataset.id);
+});
+
