@@ -19,6 +19,13 @@ export async function fetchArtistById(id) {
   return response.data;
 }
 
+export async function fetchArtistAlbums(id) {
+  if (!id) throw new Error('Artist id is required');
+
+  const response = await axios.get(`${API_BASE}/artists/${id}/albums`);
+  return response.data;
+}
+
 export async function fetchGenres() {
   const response = await axios.get(`${API_BASE}/genres`);
   return response.data;
