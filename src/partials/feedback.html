@@ -1,5 +1,36 @@
 <!-- htmlhint doctype-first:false -->
-<section class="feedback section" aria-labelledby="feedback-title" id="feedback-js">
+<!-- !!!section FEEDBACK / Відгуки!!! -->
+<section class="feedback section" aria-labelledby="feedback-heading" id="feedback-js">
   <!-- Українською: Тематична група контенту / English: Thematic content group -->
-  <h2 class="feedback-title" id="feedback-title">Feedback</h2>
+  <h2 class="visually-hidden" id="feedback-heading">Feedbacks our visitors</h2>
+  <!-- Українською: Прихований заголовок секції для a11y та SEO / English: Hidden section heading for a11y and SEO -->
+  <div class="container">
+    <!-- Українською: Універсальний контейнер / English: Universal container -->
+    <div class="feedback-swiper swiper">
+      <div class="swiper-wrapper"></div>
+      <div class="feedback-pagination-wrap">
+        <div class="swiper-pagination" aria-label="Пагінація відгуків"></div>
+      </div>
+      <button class="feedback-nav feedback-nav-prev" type="button" aria-label="Попередній відгук">
+        <svg
+          class="feedback-nav-icon"
+          viewBox="0 0 30 32"
+          width="48"
+          height="48"
+          aria-hidden="true">
+          <use href="./img/sprite.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <button class="feedback-nav feedback-nav-next" type="button" aria-label="Наступний відгук">
+        <svg
+          class="feedback-nav-icon"
+          viewBox="0 0 30 32"
+          width="48"
+          height="48"
+          aria-hidden="true">
+          <use href="./img/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 </section>
