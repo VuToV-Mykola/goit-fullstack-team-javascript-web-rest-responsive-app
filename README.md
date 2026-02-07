@@ -40,10 +40,11 @@
 | Категорія | Стек |
 |-----------|------|
 | Розмітка | HTML5, семантичні теги |
-| Стилі | CSS3, modern-normalize, mobile-first, [Stylelint](https://stylelint.io/user-guide/rules) |
-| Скрипти | JavaScript (ES modules) |
+| Стилі | CSS3, [modern-normalize](https://cdnjs.com/libraries/modern-normalize), mobile-first, [Stylelint](https://stylelint.io/user-guide/rules) |
+| Скрипти | JavaScript (ES modules), [Axios](https://axios-http.com/), [Swiper](https://swiperjs.com/), [Raty.js](https://www.npmjs.com/package/raty-js), css-star-rating |
 | Збірка | Vite, PostCSS (sort media queries), vite-plugin-html-inject, vite-plugin-full-reload |
-| Інше | [Code Guide](https://codeguide.co/), валідатори W3C / JSHint |
+| Іконки та зображення | [IcoMoon](https://icomoon.io/) (sprite.svg), [SVGOMG](https://jakearchibald.github.io/svgomg/) (мініфікація SVG), [Squoosh](https://squoosh.app/) (WebP) |
+| Інше | [Code Guide](https://codeguide.co/), валідатори [W3C](https://validator.w3.org/) / [JSHint](https://jshint.com/) |
 
 ---
 
