@@ -1,11 +1,12 @@
 import {fetchArtistById} from './api-artists';
+import {fetchArtistAlbums} from './api-artists';
 
 const modalContent = document.querySelector('.modal-content');
 const closeModalBtn = document.querySelector('.modal-close-btn');
 const backdrop = document.querySelector('.backdrop');
 const modalLoader = document.getElementById('modalLoader');
 
-function createArtistMarkup(artist) {
+function createArtistMarkup(artist, albums = []) {
   const {
     strArtist: artistName,
     strArtistThumb: artistImage,
@@ -19,7 +20,7 @@ function createArtistMarkup(artist) {
   } = artist;
 
   return `
-    <h2 class="artist-name">${artistName}</h2>
+    <h2 class="artist-title">${artistName}</h2>
 
 <div class="artist-container">
   <div class="artist-image">
@@ -29,7 +30,8 @@ function createArtistMarkup(artist) {
   <div class="artist-info">
     <div class="info-row">
       <span class="label">Years active</span>
-      <span class="value">${formedYear}-${endedYear === null ? 'present' : endedYear}</span>
+      <span class="value">${formedYear}-${endedYear ?? 'present'}
+</span>
     </div>
 
     <div class="info-row">
@@ -60,6 +62,7 @@ function createArtistMarkup(artist) {
   </div>
 </div>
 
+    ${createAlbumsSectionMarkup(albums)}
 
   `;
 }
@@ -67,10 +70,14 @@ function createArtistMarkup(artist) {
 export async function openArtistModal(artistId) {
   backdrop.classList.remove('is-hidden');
   document.body.style.overflow = 'hidden';
+  addModalEventListeners();
+
   try {
     showModalLoader();
     const artist = await fetchArtistById(artistId);
-    modalContent.innerHTML = createArtistMarkup(artist);
+    const albumsData = await fetchArtistAlbums(artistId);
+    const albums = albumsData.albumsList || [];
+    modalContent.innerHTML = createArtistMarkup(artist, albums);
   } catch (error) {
     console.log(error);
     modalContent.innerHTML = `
@@ -82,24 +89,37 @@ export async function openArtistModal(artistId) {
 }
 
 function closeModal() {
+  removeModalEventListeners();
+
   backdrop.classList.add('is-hidden');
   document.body.style.overflow = '';
 
   modalContent.innerHTML = '';
 }
 
-closeModalBtn.addEventListener('click', closeModal);
-document.addEventListener('keydown', e => {
+function onEscKeydown(e) {
   if (e.key === 'Escape') {
     closeModal();
   }
-});
+}
 
-backdrop.addEventListener('click', e => {
+function onBackdropClick(e) {
   if (e.target === backdrop) {
     closeModal();
   }
-});
+}
+
+function addModalEventListeners() {
+  closeModalBtn.addEventListener('click', closeModal);
+  document.addEventListener('keydown', onEscKeydown);
+  backdrop.addEventListener('click', onBackdropClick);
+}
+
+function removeModalEventListeners() {
+  closeModalBtn.removeEventListener('click', closeModal);
+  document.removeEventListener('keydown', onEscKeydown);
+  backdrop.removeEventListener('click', onBackdropClick);
+}
 
 export function showModalLoader() {
   modalLoader.classList.remove('is-hidden');
@@ -111,17 +131,12 @@ function hideModalLoader() {
 
 const list = document.getElementById('artistsList');
 
-artistsList.addEventListener('click', async e => {
+list.addEventListener('click', async e => {
   if (e.target.classList.contains('artist-more')) {
     const artistCard = e.target.closest('.artist-card');
     if (!artistCard) return;
 
     const artistId = artistCard.dataset.id;
-    backdrop.classList.remove('is-hidden');
-    document.body.style.overflow = 'hidden';
-    const modalContent = document.querySelector('.modal-content');
-    modalContent.innerHTML = '';
-    showModalLoader();
 
     try {
       await openArtistModal(artistId);
@@ -130,3 +145,78 @@ artistsList.addEventListener('click', async e => {
     }
   }
 });
+
+// ALBUM
+
+function formatDuration(ms) {
+  if (!ms) return '--:--';
+  const totalSeconds = Math.floor(ms / 1000);
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+}
+
+function createTrackMarkup(track) {
+  const {strTrack, intDuration, movie} = track;
+
+  return `
+    <li class="track">
+      <span class="track-name">${strTrack}</span>
+      <span class="track-time">${formatDuration(intDuration)}</span>
+
+      ${
+        movie
+          ? `
+        <a
+          class="track-link"
+          href="${movie}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open track on YouTube">
+          <svg class="youtube-icon" width="20" height="14" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M23.5 6.2s-.2-1.7-.8-2.4c-.7-.8-1.5-.8-1.9-.9C17.9 2.5 12 2.5 12 2.5h0s-5.9 0-8.8.4c-.4.1-1.2.1-1.9.9-.6.7-.8 2.4-.8 2.4S0 8.1 0 10v1.9c0 1.9.2 3.8.2 3.8s.2 1.7.8 2.4c.7.8 1.6.8 2 .9 1.5.2 6.8.4 8.9.4s5.9 0 8.8-.4c.4-.1 1.2-.1 1.9-.9.6-.7.8-2.4.8-2.4s.2-1.9.2-3.8V10c0-1.9-.2-3.8-.2-3.8zM9.5 14.7V7.3l6.3 3.7-6.3 3.7z"
+              fill="currentColor" />
+          </svg>
+        </a>`
+          : ''
+      }
+    </li>
+  `;
+}
+
+function createAlbumMarkup(album) {
+  const {strAlbum, intYearReleased, tracks = []} = album;
+
+  return `
+    <div class="album-card">
+      <h3 class="album-title">
+        ${strAlbum}
+        <span class="album-year">(${intYearReleased})</span>
+      </h3>
+
+      <div class="tracks-header">
+        <span>Track</span>
+        <span>Time</span>
+        <span>Link</span>
+      </div>
+
+      <ul class="tracks-list">
+        ${tracks.map(createTrackMarkup).join('')}
+      </ul>
+    </div>
+  `;
+}
+
+function createAlbumsSectionMarkup(albums) {
+  if (!albums || !albums.length) return '';
+
+  return `
+    <section class="albums">
+      <h2 class="albums-title">Albums</h2>
+      <div class="albums-list">
+        ${albums.map(createAlbumMarkup).join('')}
+      </div>
+    </section>
+  `;
+}
