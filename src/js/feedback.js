@@ -19,17 +19,11 @@ import {FEEDBACKS_LIMIT} from './config.js';
 /** Нормалізує відповідь fetchFeedbacks() */
 function getFeedbacksList(response) {
   if (Array.isArray(response)) {
-    console.log('[feedback] getFeedbacksList: відповідь — масив, length =', response.length);
     return response;
   }
   if (response && typeof response.data !== 'undefined') {
-    console.log(
-      "[feedback] getFeedbacksList: відповідь — об'єкт .data, length =",
-      response.data.length
-    );
     return response.data;
   }
-  console.log('[feedback] getFeedbacksList: порожній результат');
 
   return [];
 }
@@ -59,7 +53,6 @@ function getSlideHtml(item) {
 /** Функція ініціалізації оцінки **/
 function initStars() {
   const ratingElements = document.querySelectorAll('.feedback-rating');
-  console.log('[feedback] initStars: знайдено елементів рейтингу =', ratingElements.length);
   ratingElements.forEach(element => {
     const score = parseInt(element.getAttribute('data-score'), 10);
     if (Number.isNaN(score)) return;
@@ -136,28 +129,17 @@ function bindPaginationClicks(swiper) {
 
 /** Функція ініціалізації секції відгуків **/
 async function initFeedbackSection() {
-  console.log('[feedback] initFeedbackSection: старт');
   const wrapper = document.querySelector('.feedback-swiper .swiper-wrapper');
   if (!wrapper) {
-    console.warn(
-      '[feedback] initFeedbackSection: не знайдено .feedback-swiper .swiper-wrapper, вихід'
-    );
     return;
   }
 
   try {
-    console.log('[feedback] fetchFeedbacks: запит до API...');
     const response = await fetchFeedbacks();
-    console.log('[feedback] fetchFeedbacks: відповідь отримано');
     const list = getFeedbacksList(response);
     const items = list.slice(0, FEEDBACKS_LIMIT);
-    console.log(
-      '[feedback] відгуків після обрізки (limit = ' + FEEDBACKS_LIMIT + '):',
-      items.length
-    );
 
     if (items.length === 0) {
-      console.log('[feedback] показ повідомлення «Відгуки тимчасово недоступні»');
       wrapper.innerHTML = `
         <div class="swiper-slide">
           <div class="feedback-card">
@@ -167,11 +149,9 @@ async function initFeedbackSection() {
       `;
     } else {
       wrapper.innerHTML = items.map(getSlideHtml).join('');
-      console.log('[feedback] вставлено слайдів:', items.length);
       initStars();
     }
 
-    console.log('[feedback] ініціалізація Swiper...');
     const swiper = new Swiper('.feedback-swiper', {
       modules: [Navigation, Pagination],
       direction: 'horizontal',
@@ -206,12 +186,7 @@ async function initFeedbackSection() {
     bindPaginationClicks(swiper);
     swiper.on('slideChange', () => setActiveBullet(swiper));
     setActiveBullet(swiper);
-    console.log(
-      '[feedback] initFeedbackSection: успішно завершено, слайдів =',
-      swiper.slides.length
-    );
   } catch (err) {
-    console.error('[feedback] Помилка завантаження відгуків:', err);
     wrapper.innerHTML = `
       <div class="swiper-slide">
         <div class="feedback-card">
@@ -219,9 +194,7 @@ async function initFeedbackSection() {
         </div>
       </div>
     `;
-    console.log('[feedback] показано повідомлення про помилку користувачу');
   }
 }
 
-console.log('[feedback] підключено, виклик initFeedbackSection()');
 initFeedbackSection();
