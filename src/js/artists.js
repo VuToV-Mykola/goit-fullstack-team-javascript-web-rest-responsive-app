@@ -61,7 +61,7 @@ function renderArtists(artists) {
     })
     .join('');
 
-  artistsList.insertAdjacentHTML('beforeend', markup);
+  list.insertAdjacentHTML('beforeend', markup);
 }
 
 // LOADER
