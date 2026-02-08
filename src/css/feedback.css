@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-/* Mobile 320px */
+/* Мобільна 320px */
 .feedback-swiper {
   position: relative;
   width: 100%;
@@ -167,7 +167,7 @@
   border-color: rgb(255 255 255 / 25%);
 }
 
-/* Tablet 768px */
+/* Планшетна версія 768px */
 @media only screen and (width >= 768px) {
   .feedback-swiper .swiper-wrapper {
     min-height: 380px;
@@ -199,7 +199,7 @@
   }
 }
 
-/* Desktop 1440px */
+/* Десктопна Версія 1440px */
 @media only screen and (width >= 1440px) {
   .feedback.section .container {
     display: flex;
