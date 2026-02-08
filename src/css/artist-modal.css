@@ -260,7 +260,7 @@
 
   .artist-info {
     display: grid;
-    grid-template-columns: 146 1fr;
+    grid-template-columns: 146px 1fr;
   }
 
   /* Album */
