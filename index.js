@@ -1,7 +1,7 @@
 import{a as c,S as M,N as I,P as T,R as x}from"./assets/vendor-CoX6hYw-.js";(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const n of document.querySelectorAll('link[rel="modulepreload"]'))a(n);new MutationObserver(n=>{for(const r of n)if(r.type==="childList")for(const i of r.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&a(i)}).observe(document,{childList:!0,subtree:!0});function s(n){const r={};return n.integrity&&(r.integrity=n.integrity),n.referrerPolicy&&(r.referrerPolicy=n.referrerPolicy),n.crossOrigin==="use-credentials"?r.credentials="include":n.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function a(n){if(n.ep)return;n.ep=!0;const r=s(n);fetch(n.href,r)}})();const l="https://sound-wave.b.goit.study/api",Q=1,C=8,D=10;async function U(e=Q,t=C){return(await c.get(`${l}/artists`,{params:{page:e,limit:t}})).data}async function H(e){if(!e)throw new Error("Artist id is required");return(await c.get(`${l}/artists/${e}`)).data}async function q(e){if(!e)throw new Error("Artist id is required");return(await c.get(`${l}/artists/${e}/albums`)).data}async function F(){try{return(await c.get(`${l}/feedbacks`)).data}catch(e){throw new Error("Failed to load feedbacks",{cause:e})}}document.querySelectorAll(".nav-list a").forEach(e=>{e.addEventListener("click",()=>{document.getElementById("nav-toggle").checked=!1})});function O(){const e=document.querySelector("#btn-hero-js");e&&e.addEventListener("click",()=>{const t=document.querySelector("#artists");t&&t.scrollIntoView({behavior:"smooth",block:"start"})})}document.addEventListener("DOMContentLoaded",()=>{O()});const P=document.getElementById("artistsList"),p=document.getElementById("loadMoreBtn"),h=document.getElementById("artistsLoader");let m=1;const v=8;async function y(){try{W();const e=await U(m,v),t=e.artists||e;z(t),t.length<v?p.classList.add("is-hidden"):p.classList.remove("is-hidden"),m+=1}catch(e){console.error("Failed to load artists:",e)}finally{K()}}function z(e){if(!Array.isArray(e))return;const t=e.map(({_id:s,strArtist:a,strArtistThumb:n,genres:r,strBiographyEN:i})=>{const u=r.map(f=>`<span class="artist-genre">${f}</span>`).join("");return`
         <li class="artist-card" data-id="${s}">
           <div class="artist-thumb">
-            <img src="${n}" alt="${a}" class="artist-img" />
+            <img src="${n}" alt="${a}" class="artist-img">
           </div>
 
           <div class="artist-content">
@@ -16,7 +16,7 @@ import{a as c,S as M,N as I,P as T,R as x}from"./assets/vendor-CoX6hYw-.js";(fun
 
 <div class="artist-container">
   <div class="artist-image">
-    <img src="${a}" alt="${s||"Artist"}" />
+    <img src="${a}" alt="${s||"Artist"}">
   </div>
 
   <div class="artist-info">
@@ -73,7 +73,7 @@ import{a as c,S as M,N as I,P as T,R as x}from"./assets/vendor-CoX6hYw-.js";(fun
           <svg class="youtube-icon" width="20" height="14" viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M23.5 6.2s-.2-1.7-.8-2.4c-.7-.8-1.5-.8-1.9-.9C17.9 2.5 12 2.5 12 2.5h0s-5.9 0-8.8.4c-.4.1-1.2.1-1.9.9-.6.7-.8 2.4-.8 2.4S0 8.1 0 10v1.9c0 1.9.2 3.8.2 3.8s.2 1.7.8 2.4c.7.8 1.6.8 2 .9 1.5.2 6.8.4 8.9.4s5.9 0 8.8-.4c.4-.1 1.2-.1 1.9-.9.6-.7.8-2.4.8-2.4s.2-1.9.2-3.8V10c0-1.9-.2-3.8-.2-3.8zM9.5 14.7V7.3l6.3 3.7-6.3 3.7z"
-              fill="currentColor" />
+              fill="currentColor"></path>
           </svg>
         </a>`:""}
     </li>
