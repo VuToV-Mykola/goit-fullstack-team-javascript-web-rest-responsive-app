@@ -53,6 +53,7 @@ function getSlideHtml(item) {
 /** Функція ініціалізації оцінки **/
 function initStars() {
   const ratingElements = document.querySelectorAll('.feedback-rating');
+  const STAR_SIZE = 20;
   ratingElements.forEach(element => {
     const score = parseInt(element.getAttribute('data-score'), 10);
     if (Number.isNaN(score)) return;
@@ -63,6 +64,11 @@ function initStars() {
       readOnly: true,
     });
     raty.init();
+    /* width/height для CLS — Lighthouse */
+    element.querySelectorAll('img').forEach(img => {
+      img.setAttribute('width', String(STAR_SIZE));
+      img.setAttribute('height', String(STAR_SIZE));
+    });
   });
 }
 
@@ -178,7 +184,8 @@ async function initFeedbackSection() {
         bulletActiveClass: 'swiper-pagination-bullet-active',
         renderBullet(index, className) {
           if (index >= 3) return '';
-          return `<span class="${className}" role="button" tabindex="0"></span>`;
+          const labels = ['Go to first feedback', 'Go to middle feedback', 'Go to last feedback'];
+          return `<span class="${className}" role="button" tabindex="0" aria-label="${labels[index]}"></span>`;
         },
       },
     });

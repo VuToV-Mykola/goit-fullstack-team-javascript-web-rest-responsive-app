@@ -47,7 +47,7 @@ function renderArtists(artists) {
       return `
         <li class="artist-card" data-id="${_id}">
           <div class="artist-thumb">
-            <img src="${strArtistThumb}" alt="${strArtist}" class="artist-img">
+            <img src="${strArtistThumb}" alt="${strArtist}" class="artist-img" loading="lazy">
           </div>
 
           <div class="artist-content">

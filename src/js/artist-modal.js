@@ -172,7 +172,7 @@ function createTrackMarkup(track) {
           href="${movie}"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Open track on YouTube">
+          aria-label="Open ${strTrack || 'track'} on YouTube">
           <svg class="youtube-icon" width="20" height="14" viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M23.5 6.2s-.2-1.7-.8-2.4c-.7-.8-1.5-.8-1.9-.9C17.9 2.5 12 2.5 12 2.5h0s-5.9 0-8.8.4c-.4.1-1.2.1-1.9.9-.6.7-.8 2.4-.8 2.4S0 8.1 0 10v1.9c0 1.9.2 3.8.2 3.8s.2 1.7.8 2.4c.7.8 1.6.8 2 .9 1.5.2 6.8.4 8.9.4s5.9 0 8.8-.4c.4-.1 1.2-.1 1.9-.9.6-.7.8-2.4.8-2.4s.2-1.9.2-3.8V10c0-1.9-.2-3.8-.2-3.8zM9.5 14.7V7.3l6.3 3.7-6.3 3.7z"

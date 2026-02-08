@@ -13,13 +13,25 @@
 
     <meta name="description" content="Page description">
     <!-- Українською: Опис сторінки для SEO / English: Page description for SEO -->
+    <!-- Preconnect до API та зображень -->
+    <link rel="preconnect" href="https://ftp.goit.study">
+    <link rel="preconnect" href="https://sound-wave.b.goit.study">
     <!--!!! MODERN NORMALIZE !!!-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.css"
       integrity="sha512-gnAN+RgTMylunXI7AMg+PtcUGpKZFkZJoFIkAWvdPFRrFJz3p2tx4+9xbjILRfN7CzoViMgS8vSf06fSQzWZjA=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer">
+      referrerpolicy="no-referrer"
+      media="print"
+      onload="this.media='all'">
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+    </noscript>
     <!--!!! FONTS !!!-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
