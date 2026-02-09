@@ -74,6 +74,12 @@
   font-weight: 400;
 }
 
+.info-row--bio .value {
+  max-height: 324px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
 .info-genres {
   display: flex;
   flex-wrap: wrap;
@@ -230,6 +236,10 @@
     grid-column: 1 / -1;
   }
 
+  .info-row--bio .value {
+    max-height: 135px;
+  }
+
   .info-row--genres {
     grid-row: 4;
     grid-column: 1 / -1;
@@ -261,6 +271,10 @@
   .artist-info {
     display: grid;
     grid-template-columns: 146px 1fr;
+  }
+
+  .info-row--bio .value {
+    max-height: 162px;
   }
 
   /* Album */
