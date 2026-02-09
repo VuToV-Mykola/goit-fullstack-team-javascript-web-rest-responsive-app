@@ -38,15 +38,16 @@ function renderArtists(artists) {
   if (!Array.isArray(artists)) return;
 
   const markup = artists
-    .map(({_id, strArtist, strArtistThumb, genres, strBiographyEN}) => {
+    .map(({_id, strArtist, strArtistThumb, genres, strBiographyEN}, index) => {
       const genresMarkup = genres
         .map(genre => `<span class="artist-genre">${genre}</span>`)
         .join('');
+      const fetchPriority = index === 0 ? ' fetchpriority="high"' : '';
 
       return `
         <li class="artist-card" data-id="${_id}">
           <div class="artist-thumb">
-            <img src="${strArtistThumb}" alt="${strArtist}" class="artist-img" loading="lazy">
+            <img src="${strArtistThumb}" alt="${strArtist}" class="artist-img" width="500" height="295" loading="lazy" decoding="async"${fetchPriority}>
           </div>
 
           <div class="artist-content">

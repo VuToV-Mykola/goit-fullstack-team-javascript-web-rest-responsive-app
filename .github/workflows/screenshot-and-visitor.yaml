@@ -562,7 +562,6 @@ jobs:
             fi
           fi
 
-          CONTRIBUTORS_BADGE="[![Contributors](https://img.shields.io/github/contributors/${{ github.repository }}?logo=github)](https://github.com/${{ github.repository }}/graphs/contributors)"
           CONTRIBUTORS_IMAGE="[![Contributors](https://contrib.rocks/image?repo=${{ github.repository }}&max=20)](https://github.com/${{ github.repository }}/graphs/contributors)"
 
           update_readme() {
@@ -583,15 +582,13 @@ jobs:
               echo ""
               echo "[![📊 Views](https://img.shields.io/endpoint?url=$REPO_URL/$DATA_DIR/visitors-badge.json)](https://github.com/${{ github.repository }}/graphs/traffic)"
               echo "[![⭐ Stars](https://img.shields.io/endpoint?url=$REPO_URL/$DATA_DIR/likes-badge.json)](https://github.com/${{ github.repository }}/actions/workflows/screenshot-and-visitor.yaml)"
-              echo "[![👥 Contributors](https://img.shields.io/github/contributors/${{ github.repository }})](https://github.com/${{ github.repository }}/graphs/contributors)"
+              echo "[![👥 Contributors](https://img.shields.io/github/contributors/${{ github.repository }}?style=for-the-badge&logo=github&color=blue)](https://github.com/${{ github.repository }}/graphs/contributors)"
               echo "[![📦 Size](https://img.shields.io/endpoint?url=$REPO_URL/$DATA_DIR/repo-size.json)](https://github.com/${{ github.repository }})"
               echo "[![📄 License](https://img.shields.io/endpoint?url=$REPO_URL/$DATA_DIR/repo-license.json)](https://github.com/${{ github.repository }}/blob/main/LICENSE)"
               [ -n "$DOWNLOADS_BADGE" ] && echo "$DOWNLOADS_BADGE"
               echo "$screenshot_section"
               echo ""
               echo "## 👥 $contributors_title"
-              echo "$CONTRIBUTORS_BADGE"
-              echo ""
               echo "$CONTRIBUTORS_IMAGE"
               echo "<!-- END:AUTOGEN -->"
               cat "${file}.after.tmp"

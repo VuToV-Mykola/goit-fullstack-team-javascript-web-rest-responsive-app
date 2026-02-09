@@ -9,7 +9,7 @@
 
 [![📊 Views](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/visitors-badge.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/traffic)
 [![⭐ Stars](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/likes-badge.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/actions/workflows/screenshot-and-visitor.yaml)
-[![👥 Contributors](https://img.shields.io/github/contributors/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/contributors)
+[![👥 Contributors](https://img.shields.io/github/contributors/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app?style=for-the-badge&logo=github&color=blue)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/contributors)
 [![📦 Size](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/repo-size.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app)
 [![📄 License](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/repo-license.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/blob/main/LICENSE)
 
@@ -18,8 +18,6 @@
 ![Project Screenshot](./assets/screenshot.png)
 
 ## 👥 Mitwirkende
-[![Contributors](https://img.shields.io/github/contributors/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app?logo=github)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/contributors)
-
 [![Contributors](https://contrib.rocks/image?repo=VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app&max=20)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/contributors)
 <!-- END:AUTOGEN -->
 
@@ -142,45 +140,30 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
 
 **Zuordnung Mockup → Dateien:**
 
-| Mockup-Sektion | Partial | CSS |
-|----------------|---------|-----|
-| Header | `header.html` | `header.css` |
-| Hero | `hero.html` | `hero.css` |
-| About | `about.html` | `about.css` |
-| Artists | `artists.html` | `artists.css` |
-| Feedback | `feedback.html` | `feedback.css` |
-| Artist Details Modal | `artist-modal.html` | `artist-modal.css` |
-| Footer | `footer.html` | `footer.css` |
+| Mockup-Sektion | Partial | CSS | JS / Abhängigkeiten |
+|----------------|---------|-----|---------------------|
+| Header | `header.html` | `header.css` | `header-mob-menu.js`, `sprite.svg` |
+| Hero | `hero.html` | `hero.css` | `hero.js`, `sprite.svg` |
+| About | `about.html` | `about.css` | — |
+| Artists | `artists.html` | `artists.css` | `artists.js`, `api-artists.js`, `config.js` |
+| Feedback | `feedback.html` | `feedback.css` | `feedback.js` (Swiper, Raty.js), `sprite.svg` |
+| Artist Details Modal | `artist-modal.html` | `artist-modal.css` | `artist-modal.js`, `api-artists.js`, `config.js` |
+| Footer | `footer.html` | `footer.css` | `sprite.svg` |
 
 ---
 
 ## 👥 Teammitglieder
 
-1. **Team lead Vutov Mykola**
-   - [x] GitHubName: VuToV-Mykola — GitHubNick: VuToV-Mykola  
-   - GitHub: [Repository](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app) · [GitHub Pages](https://vutov-mykola.github.io/goit-fullstack-team-javascript-web-rest-responsive-app/)
-
-2. **Scrum master Vladimir Kostik**
-   - [x] GitHubName: Vladimir Kostik — GitHubNick: Vladimir_Kostik  
-   - [Trello-Board](https://trello.com/invite/b/6983854b2b91b6cce8c6cb1f/ATTI7a3fbac5afba7f60b5aabaddf40a90860123F1DD/project-javascript)
-
-3. **Backend master Elina Warzer**
-   - [x] GitHubName: Elina Reznichenko — GitHubNick: EllieReznichenko
-
-4. **Developer Oleksandr Chernyshov**
-   - [x] GitHubName: Oleksandr Chernyshov — GitHubNick: AlPetrChernyshov
-
-5. **Developer Mariam**
-   - [x] GitHubName: Mariam — GitHubNick: MariamPadalka
-
-6. **Developer Oleksandr Sheveria**
-   - [x] GitHubName: Oleksandr Sheveria — GitHubNick: Oleksadnr
-
-7. **Developer Tetiana Zinovieva**
-   - [x] GitHubName: Tetiana Zinovieva — GitHubNick: TaliaZcoder
-
-8. **Developer Svitlana Tokarenko**
-   - [x] GitHubName: Svitlana — GitHubNick: Svitlana
+| # | Mitglied | GitHub | Rolle / Sektion |
+|---|----------|--------|-----------------|
+| 1 | **Mykola Vutov** | [VuToV-Mykola](https://github.com/VuToV-Mykola) | Team Lead: [goit-fullstack-team-javascript-web-rest-responsive-app](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app), Hero, About, Footer |
+| 2 | **Vladimir Kostik** | [VladimirKostik](https://github.com/VladimirKostik) | Scrum Master: [Trello](https://trello.com/invite/b/6983854b2b91b6cce8c6cb1f/ATTI7a3fbac5afba7f60b5aabaddf40a90860123F1DD/project-javascript), Header |
+| 3 | **Elina Reznichenko** | [EllieReznichenko](https://github.com/EllieReznichenko) | Backend (`api-artists.js`) |
+| 4 | **Oleksandr Sheveria** | [Shevk1n](https://github.com/Shevk1n) | Feedback (Swiper.js, raty-js) |
+| 5 | **Svitlana Tokarenko** | [Svetlana-see](https://github.com/Svetlana-see) | Feedback (Swiper.js, raty-js) |
+| 6 | **Mariam Padalka** | [MariamPadalka](https://github.com/MariamPadalka) | Artist Modal (asynchrone API, dynamisches Rendering) |
+| 7 | **Tetiana Zinovieva** | [TaliaZcoder](https://github.com/TaliaZcoder) | Artists (asynchrone API, dynamisches Rendering) |
+| 8 | **Oleksandr Chernyshov** | [AlPetrChernyshov](https://github.com/AlPetrChernyshov) | Artists (asynchrone API, dynamisches Rendering) |
 
 ---
 

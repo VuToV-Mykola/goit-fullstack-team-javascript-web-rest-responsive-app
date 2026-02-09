@@ -4,10 +4,15 @@
   align-items: center;
 }
 
-/* Мобільна 320px */
 .feedback-swiper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   width: 100%;
+  max-width: 288px;
+  min-height: 254px;
   box-sizing: border-box;
   overflow: hidden;
   touch-action: pan-y;
@@ -15,7 +20,7 @@
 
 .feedback-swiper .swiper-wrapper {
   align-items: stretch;
-  min-height: 320px;
+  min-height: 162px;
 }
 
 .feedback-swiper .swiper-slide {
@@ -24,7 +29,7 @@
   align-items: center;
   text-align: center;
   box-sizing: border-box;
-  min-height: 320px;
+  min-height: 162px;
 }
 
 .feedback-card {
@@ -94,6 +99,7 @@
   justify-content: center;
   gap: 9px;
   overflow: visible;
+  flex-shrink: 0;
 }
 
 .feedback-swiper .swiper-pagination-bullet {
@@ -154,8 +160,8 @@
 }
 
 .feedback-nav:focus {
-  outline: 2px solid rgb(255 255 255 / 70%);
-  outline-offset: 2px;
+  outline: none;
+  border-color: rgb(255 255 255 / 70%);
 }
 
 .feedback-nav:hover:not(.swiper-button-disabled) {
@@ -172,14 +178,18 @@
   border-color: rgb(255 255 255 / 25%);
 }
 
-/* Планшетна версія 768px */
 @media only screen and (width >= 768px) {
+  .feedback-swiper {
+    max-width: 704px;
+    min-height: 298px;
+  }
+
   .feedback-swiper .swiper-wrapper {
-    min-height: 380px;
+    min-height: 174px;
   }
 
   .feedback-swiper .swiper-slide {
-    min-height: 380px;
+    min-height: 174px;
   }
 
   .feedback-text {
@@ -200,11 +210,10 @@
   }
 
   .feedback-swiper .swiper-pagination {
-    margin-top: 32px;
+    margin-top: 0;
   }
 }
 
-/* Десктопна Версія 1440px */
 @media only screen and (width >= 1440px) {
   .feedback.section .container {
     display: flex;
@@ -212,12 +221,17 @@
     gap: 80px;
   }
 
+  .feedback-swiper {
+    max-width: 1312px;
+    min-height: 398px;
+  }
+
   .feedback-swiper .swiper-wrapper {
-    min-height: 400px;
+    min-height: 232px;
   }
 
   .feedback-swiper .swiper-slide {
-    min-height: 400px;
+    min-height: 232px;
   }
 
   .feedback-text {
@@ -233,6 +247,6 @@
   }
 
   .feedback-swiper .swiper-pagination {
-    margin-top: 75px;
+    margin-top: 0;
   }
 }

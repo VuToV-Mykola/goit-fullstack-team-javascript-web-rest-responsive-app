@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+
 scripts
 dist
 dist-ssr
@@ -16,6 +17,9 @@ dist-ssr
 # Editor directories and files
 .editorconfig
 .vscode/*
+.figma-mockup.json
+figma-mockup.json
+
 !.vscode/extensions.json
 .idea
 .DS_Store
