@@ -30,7 +30,7 @@ function createArtistMarkup(artist, albums = []) {
   <div class="artist-info">
     <div class="info-row">
       <span class="label">Years active</span>
-      <span class="value">${formedYear}-${endedYear ?? 'present'}
+      <span class="value">${formatYears(formedYear, endedYear)}
 </span>
     </div>
 
@@ -65,6 +65,13 @@ function createArtistMarkup(artist, albums = []) {
     ${createAlbumsSectionMarkup(albums)}
 
   `;
+}
+
+function formatYears(formedYear, endedYear) {
+  if (!formedYear && !endedYear) return 'Information missing';
+  if (formedYear && !endedYear) return `${formedYear}–present`;
+  if (!formedYear && endedYear) return `until ${endedYear}`;
+  return `${formedYear}–${endedYear}`;
 }
 
 export async function openArtistModal(artistId) {
