@@ -9,17 +9,16 @@
 
 [![📊 Views](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/visitors-badge.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/traffic)
 [![⭐ Stars](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/likes-badge.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/actions/workflows/screenshot-and-visitor.yaml)
-[![👥 Contributors](https://img.shields.io/github/contributors/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app?style=for-the-badge&logo=github)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/contributors)
+[![👥 Contributors](https://img.shields.io/github/contributors/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/contributors)
 [![📦 Size](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/repo-size.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app)
-[![📄 License](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/repo-license.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/blob/main/.github/LICENSE)
+[![📄 License](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/main/assets/db/repo-license.json)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/blob/main/LICENSE)
 
 
 ## 📸 Projektscreenshot
 ![Project Screenshot](./assets/screenshot.png)
 
 ## 👥 Mitwirkende
-
-[![Contributors](https://contrib.rocks/image?repo=VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/contributors)
+[![Contributors](https://img.shields.io/github/contributors/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app?logo=github)](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app/graphs/contributors)
 <!-- END:AUTOGEN -->
 
 ---
