@@ -563,7 +563,7 @@ jobs:
           fi
 
           CONTRIBUTORS_BADGE="[![Contributors](https://img.shields.io/github/contributors/${{ github.repository }}?logo=github)](https://github.com/${{ github.repository }}/graphs/contributors)"
-          CONTRIBUTORS_IMAGE="[![Contributors](https://contrib.rocks/image?repo=${{ github.repository }}&max=10)](https://github.com/${{ github.repository }}/graphs/contributors)"
+          CONTRIBUTORS_IMAGE="[![Contributors](https://contrib.rocks/image?repo=${{ github.repository }}&max=20)](https://github.com/${{ github.repository }}/graphs/contributors)"
 
           update_readme() {
             local file="$1"

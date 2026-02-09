@@ -90,7 +90,12 @@ export async function openArtistModal(artistId) {
     showModalLoader();
     const artist = await fetchArtistById(artistId);
     const albumsData = await fetchArtistAlbums(artistId);
-    const albums = albumsData.albumsList || [];
+    const rawAlbums = albumsData.albumsList || [];
+    const albums = [...rawAlbums].sort((a, b) => {
+      const yearA = a.intYearReleased ?? 0;
+      const yearB = b.intYearReleased ?? 0;
+      return yearB - yearA;
+    });
     modalContent.innerHTML = createArtistMarkup(artist, albums);
   } catch (error) {
     console.log(error);
