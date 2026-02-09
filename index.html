@@ -13,9 +13,11 @@
 
     <meta name="description" content="Page description">
     <!-- Українською: Опис сторінки для SEO / English: Page description for SEO -->
-    <!-- Preconnect до API та зображень -->
-    <link rel="preconnect" href="https://ftp.goit.study">
-    <link rel="preconnect" href="https://sound-wave.b.goit.study">
+    <!-- Preconnect до API та зображень (PageSpeed) -->
+    <link rel="preconnect" href="https://ftp.goit.study" crossorigin="">
+    <link rel="preconnect" href="https://sound-wave.b.goit.study" crossorigin="">
+    <!-- Preload hero -->
+    <link rel="preload" href="/goit-fullstack-team-javascript-web-rest-responsive-app/assets/bg-image-mobile-BBQuTto6.webp" as="image">
     <!--!!! MODERN NORMALIZE !!!-->
     <link
       rel="stylesheet"
@@ -36,19 +38,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet">
+      media="print"
+      onload="this.media='all'">
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+    </noscript>
 
     <!--!!! STYLES (ArtistsHub Figma) !!!-->
-    <!-- All section styles via styles.css -->
-    <!-- Усі стилі секцій через styles.css -->
     <!--!!! TITLE !!!-->
     <title>ArtistsHub — адаптивний веб-додаток</title>
     <!-- Українською: Заголовок сторінки (вкладка браузера) / English: Page title (browser tab) -->
     <script type="module" crossorigin src="/goit-fullstack-team-javascript-web-rest-responsive-app/index.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-fullstack-team-javascript-web-rest-responsive-app/assets/vendor-CoX6hYw-.js">
     <link rel="stylesheet" crossorigin href="/goit-fullstack-team-javascript-web-rest-responsive-app/assets/vendor-B00NR0mh.css">
-    <link rel="stylesheet" crossorigin href="/goit-fullstack-team-javascript-web-rest-responsive-app/assets/index-CGidz4wM.css">
+    <link rel="stylesheet" crossorigin href="/goit-fullstack-team-javascript-web-rest-responsive-app/assets/index-CfxjbmJO.css">
   </head>
   <!--!!! BODY !!!-->
   <body class="page">
