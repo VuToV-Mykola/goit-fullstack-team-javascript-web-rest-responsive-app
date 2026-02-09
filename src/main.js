@@ -6,3 +6,4 @@ import './js/hero.js';
 import './js/artists.js';
 import './js/artist-modal.js';
 import './js/feedback.js';
+import './js/totop.js';
