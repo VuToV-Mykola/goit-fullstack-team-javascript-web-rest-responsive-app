@@ -160,7 +160,7 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
    - GitHub: [repository](https://github.com/VuToV-Mykola/goit-fullstack-team-javascript-web-rest-responsive-app) · [GitHub Pages](https://vutov-mykola.github.io/goit-fullstack-team-javascript-web-rest-responsive-app/)
 
 2. **Scrum master Vladimir Kostik**
-   - [x] GitHubName: VladimirKostik — GitHubNick: VladimirKostik  
+   - [x] GitHubName: Vladimir Kostik — GitHubNick: Vladimir_Kostik  
    - [Trello board](https://trello.com/invite/b/6983854b2b91b6cce8c6cb1f/ATTI7a3fbac5afba7f60b5aabaddf40a90860123F1DD/project-javascript)
 
 3. **Backend master Elina Warzer**
@@ -173,13 +173,13 @@ goit-fullstack-team-javascript-web-rest-responsive-app/
    - [x] GitHubName: Mariam — GitHubNick: MariamPadalka
 
 6. **Developer Oleksandr Sheveria**
-   - [x] GitHubName: OleksandrShevk — GitHubNick: Shevk1n
+   - [x] GitHubName: Oleksandr Sheveria — GitHubNick: Oleksadnr
 
 7. **Developer Tetiana Zinovieva**
    - [x] GitHubName: Tetiana Zinovieva — GitHubNick: TaliaZcoder
 
-8. **Developer Svetlana Tokarenko**
-   - [x] GitHubName: Svetlana — GitHubNick: Svetlana-see
+8. **Developer Svitlana Tokarenko**
+   - [x] GitHubName: Svitlana — GitHubNick: Svitlana
 
 ---
 
