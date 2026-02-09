@@ -89,34 +89,25 @@
   font-size: 18px;
   line-height: 1.5;
   transition: background 0.2s ease-in-out;
-  animation: explore-btn-pulse 2.5s ease-in-out infinite;
-}
-
-.explore-btn:hover,
-.explore-btn:focus {
-  background: rgb(118 65 145 / 60%);
+  animation: explore-btn-pulse 2s ease-in-out infinite;
 }
 
 @keyframes explore-btn-pulse {
   0%,
   100% {
-    box-shadow:
-      0 1px 2px 0 rgb(6 3 7 / 5%),
-      inset 0 -2px 1px 0 rgb(0 0 0 / 20%),
-      inset 0 0 0 1px rgb(6 3 7 / 15%),
-      inset 0 2px 1px 0 rgb(255 255 255 / 25%),
-      inset 0 32px 24px 0 rgb(255 255 255 / 5%);
+    opacity: 1;
+    transform: scale(1);
   }
 
   50% {
-    box-shadow:
-      0 1px 2px 0 rgb(6 3 7 / 5%),
-      inset 0 -2px 1px 0 rgb(0 0 0 / 20%),
-      inset 0 0 0 1px rgb(6 3 7 / 15%),
-      inset 0 2px 1px 0 rgb(255 255 255 / 25%),
-      inset 0 32px 24px 0 rgb(255 255 255 / 5%),
-      0 0 12px 2px rgb(118 65 145 / 40%);
+    opacity: 0.82;
+    transform: scale(1.03);
   }
+}
+
+.explore-btn:hover,
+.explore-btn:focus {
+  background: rgb(118 65 145 / 60%);
 }
 
 .bg-image {

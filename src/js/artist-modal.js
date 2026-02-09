@@ -90,9 +90,7 @@ export async function openArtistModal(artistId) {
     showModalLoader();
     const artist = await fetchArtistById(artistId);
     const albumsData = await fetchArtistAlbums(artistId);
-    const albums = (albumsData.albumsList || [])
-      .slice()
-      .sort((a, b) => (b.intYearReleased || 0) - (a.intYearReleased || 0));
+    const albums = albumsData.albumsList || [];
     modalContent.innerHTML = createArtistMarkup(artist, albums);
   } catch (error) {
     console.log(error);
@@ -172,17 +170,25 @@ function formatDuration(ms) {
   return `${minutes}:${seconds.toString().padStart(2, '0')}`;
 }
 
+function getYoutubeUrl(track) {
+  const url =
+    track.movie || track.strMusicVid || track.strVideo || null;
+  if (!url || typeof url !== 'string') return null;
+  const trimmed = url.trim();
+  return trimmed ? trimmed : null;
+}
+
 function createTrackMarkup(track) {
-  const {strTrack, intDuration, movie, strMusicVid, strVideo} = track;
-  const youtubeUrl = movie || strMusicVid || strVideo;
+  const {strTrack, intDuration} = track;
+  const youtubeUrl = getYoutubeUrl(track);
 
   return `
     <li class="track">
-      <span class="track-name">${strTrack ?? ''}</span>
+      <span class="track-name">${strTrack}</span>
       <span class="track-time">${formatDuration(intDuration)}</span>
 
       ${
-        youtubeUrl && String(youtubeUrl).trim()
+        youtubeUrl
           ? `
         <a
           class="track-link"
