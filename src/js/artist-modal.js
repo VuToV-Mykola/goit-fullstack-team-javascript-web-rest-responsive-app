@@ -30,33 +30,32 @@ function createArtistMarkup(artist, albums = []) {
   <div class="artist-info">
     <div class="info-row">
       <span class="label">Years active</span>
-      <span class="value">${formatYears(formedYear, endedYear)}
-</span>
+      <span class="value">${formatYears(formedYear, endedYear)}</span>
     </div>
 
     <div class="info-row">
       <span class="label">Sex</span>
-      <span class="value">${gender}</span>
+      <span class="value">${gender ?? '—'}</span>
     </div>
 
     <div class="info-row">
       <span class="label">Members</span>
-      <span class="value">${membersCount}</span>
+      <span class="value">${membersCount ?? '—'}</span>
     </div>
 
     <div class="info-row">
       <span class="label">Country</span>
-      <span class="value">${country}</span>
+      <span class="value">${country ?? '—'}</span>
     </div>
 
     <div class="info-row info-row--bio">
       <span class="label">Biography</span>
-      <span class="value">${biography}</span>
+      <span class="value">${biography ?? '—'}</span>
     </div>
 
        <div class="info-row info-row--genres">
     <ul class="info-genres">
-      ${genres.map(genre => `<li class="info-genre">${genre}</li>`).join('')}
+      ${(genres || []).map(genre => `<li class="info-genre">${genre || ''}</li>`).join('')}
     </ul>
    </div>
   </div>
@@ -67,10 +66,18 @@ function createArtistMarkup(artist, albums = []) {
   `;
 }
 
+function isMissingValue(val) {
+  if (val == null || val === '') return true;
+  const s = String(val).trim().toLowerCase();
+  return s === '' || s === 'information missing';
+}
+
 function formatYears(formedYear, endedYear) {
-  if (!formedYear && !endedYear) return 'Information missing';
-  if (formedYear && !endedYear) return `${formedYear}–present`;
-  if (!formedYear && endedYear) return `until ${endedYear}`;
+  const hasStart = !isMissingValue(formedYear);
+  const hasEnd = !isMissingValue(endedYear);
+  if (!hasStart && !hasEnd) return 'Information missing';
+  if (hasStart && !hasEnd) return `${formedYear}–present`;
+  if (!hasStart && hasEnd) return `until ${endedYear}`;
   return `${formedYear}–${endedYear}`;
 }
 
