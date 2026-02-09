@@ -4,11 +4,11 @@ on:
   push:
     branches: [gh-pages, main]
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: '0 */6 * * *'
   workflow_dispatch:
     inputs:
       add_like:
-        description: "Add your like (only one per user allowed)"
+        description: 'Add your like (only one per user allowed)'
         required: false
         default: true
         type: boolean
@@ -19,18 +19,18 @@ permissions:
   actions: read
 
 env:
-  BADGE_STYLE: "for-the-badge"
-  BADGE_COLOR: "brightgreen"
-  LIKES_COLOR: "gold"
-  DATA_DIR: "assets/db"
-  SCREENSHOT_DIR: "assets"
+  BADGE_STYLE: 'for-the-badge'
+  BADGE_COLOR: 'brightgreen'
+  LIKES_COLOR: 'gold'
+  DATA_DIR: 'assets/db'
+  SCREENSHOT_DIR: 'assets'
 
 jobs:
   update-readme-and-visitor:
     runs-on: ubuntu-latest
     env:
-      NODE_VERSION: "20.x"
-      PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "false"
+      NODE_VERSION: '20.x'
+      PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
 
     steps:
       - name: 🔥 Checkout repository
@@ -563,7 +563,7 @@ jobs:
           fi
 
           CONTRIBUTORS_BADGE="[![Contributors](https://img.shields.io/github/contributors/${{ github.repository }}?logo=github)](https://github.com/${{ github.repository }}/graphs/contributors)"
-          CONTRIBUTORS_IMAGE="[![Contributors](https://contrib.rocks/image?repo=${{ github.repository }}&max=10&columns=8)](https://github.com/${{ github.repository }}/graphs/contributors)"
+          CONTRIBUTORS_IMAGE="[![Contributors](https://contrib.rocks/image?repo=${{ github.repository }}&max=20)](https://github.com/${{ github.repository }}/graphs/contributors)"
 
           update_readme() {
             local file="$1"
