@@ -183,17 +183,17 @@ function getYoutubeUrl(track) {
   return trimmed ? trimmed : null;
 }
 
-function createTrackMarkup(track, showLinkColumn = true) {
+function createTrackMarkup(track) {
   const {strTrack, intDuration} = track;
   const youtubeUrl = getYoutubeUrl(track);
 
   return `
-    <li class="track${showLinkColumn ? '' : ' track--no-link'}">
+    <li class="track">
       <span class="track-name">${strTrack}</span>
       <span class="track-time">${formatDuration(intDuration)}</span>
 
       ${
-        showLinkColumn && youtubeUrl
+        youtubeUrl
           ? `
         <a
           class="track-link"
@@ -213,13 +213,8 @@ function createTrackMarkup(track, showLinkColumn = true) {
   `;
 }
 
-function albumHasYoutubeLinks(tracks) {
-  return (tracks || []).some(t => getYoutubeUrl(t));
-}
-
 function createAlbumMarkup(album) {
   const {strAlbum, intYearReleased, tracks = []} = album;
-  const hasLinks = albumHasYoutubeLinks(tracks);
 
   return `
     <div class="album-card">
@@ -228,14 +223,14 @@ function createAlbumMarkup(album) {
         <span class="album-year">(${intYearReleased})</span>
       </h3>
 
-      <div class="tracks-header${hasLinks ? '' : ' tracks-header--no-link'}">
+      <div class="tracks-header">
         <span>Track</span>
         <span>Time</span>
-        ${hasLinks ? '<span>Link</span>' : ''}
+        <span>Link</span>
       </div>
 
       <ul class="tracks-list">
-        ${tracks.map(t => createTrackMarkup(t, hasLinks)).join('')}
+        ${tracks.map(t => createTrackMarkup(t)).join('')}
       </ul>
     </div>
   `;

@@ -160,10 +160,6 @@
   margin-bottom: 8px;
 }
 
-.tracks-header--no-link {
-  grid-template-columns: 2fr 1fr;
-}
-
 .tracks-list {
   list-style: none;
   padding: 0;
@@ -179,10 +175,6 @@
   background: #2a2a2e;
   border-radius: 8px;
   padding: 11px 12px;
-}
-
-.track--no-link {
-  grid-template-columns: 2fr 1fr;
 }
 
 .track-name,
