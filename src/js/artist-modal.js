@@ -90,7 +90,9 @@ export async function openArtistModal(artistId) {
     showModalLoader();
     const artist = await fetchArtistById(artistId);
     const albumsData = await fetchArtistAlbums(artistId);
-    const albums = albumsData.albumsList || [];
+    const albums = (albumsData.albumsList || [])
+      .slice()
+      .sort((a, b) => (b.intYearReleased || 0) - (a.intYearReleased || 0));
     modalContent.innerHTML = createArtistMarkup(artist, albums);
   } catch (error) {
     console.log(error);
@@ -171,19 +173,20 @@ function formatDuration(ms) {
 }
 
 function createTrackMarkup(track) {
-  const {strTrack, intDuration, movie} = track;
+  const {strTrack, intDuration, movie, strMusicVid, strVideo} = track;
+  const youtubeUrl = movie || strMusicVid || strVideo;
 
   return `
     <li class="track">
-      <span class="track-name">${strTrack}</span>
+      <span class="track-name">${strTrack ?? ''}</span>
       <span class="track-time">${formatDuration(intDuration)}</span>
 
       ${
-        movie
+        youtubeUrl && String(youtubeUrl).trim()
           ? `
         <a
           class="track-link"
-          href="${movie}"
+          href="${youtubeUrl}"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Open ${strTrack || 'track'} on YouTube">
