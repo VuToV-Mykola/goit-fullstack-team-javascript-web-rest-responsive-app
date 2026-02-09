@@ -1,6 +1,41 @@
-/* ========== Body / Тіло сторінки ========== */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #764191 #060307;
+}
 
-/* Адаптивність: 320px (mobile), 768px (tablet), 1440px (desktop) */
+html::-webkit-scrollbar,
+.modal::-webkit-scrollbar,
+[class*="info-row--bio"] .value::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+html::-webkit-scrollbar-track,
+.modal::-webkit-scrollbar-track,
+[class*="info-row--bio"] .value::-webkit-scrollbar-track {
+  background: #060307;
+}
+
+html::-webkit-scrollbar-thumb,
+.modal::-webkit-scrollbar-thumb,
+[class*="info-row--bio"] .value::-webkit-scrollbar-thumb {
+  background: #764191;
+  border-radius: 3px;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+.modal::-webkit-scrollbar-thumb:hover,
+[class*="info-row--bio"] .value::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+.modal,
+[class*="info-row--bio"] .value {
+  scrollbar-width: thin;
+  scrollbar-color: #764191 #060307;
+}
+
+/* ========== Body / Тіло сторінки ========== */
 body {
   min-width: 320px;
   font-family: "IBM Plex Sans", sans-serif;
